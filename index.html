@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <link rel="icon" href="brand_assets/favicon.ico" type="image/x-icon">
   <link rel="canonical" href="https://www.playtestpilot.com/">
   <title>Playtest Pilot | Evidence-backed playtesting for indie games</title>
@@ -936,6 +936,78 @@
       .rpt-bar-top { flex-direction: column; align-items: flex-start !important; gap: 4px; }
     }
 
+    /* ══════════════════════════════════════════
+       MOBILE-ONLY FIXES (all scoped to ≤900px or smaller)
+       Desktop layout is completely untouched.
+    ══════════════════════════════════════════ */
+
+    /* Nav: smaller logo, breathing room from hamburger */
+    @media(max-width:900px) {
+      .nav-logo { height: 22px !important; }
+      .nav-inner { gap: 12px; }
+    }
+
+    /* Hero: center copy column on mobile */
+    @media(max-width:900px) {
+      .hero-copy { text-align: center; }
+      .hero-copy .body-lg { margin-left: auto; margin-right: auto; }
+      .hero-copy > div[style*="display:flex"] { justify-content: center !important; }
+      .hero-copy .trust-strip { justify-content: center; }
+    }
+
+    /* How it works: horizontal scroll carousel on mobile */
+    @media(max-width:640px) {
+      .hiw-grid {
+        display: flex !important;
+        overflow-x: auto !important;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        padding-bottom: 8px;
+        gap: 12px !important;
+        grid-template-columns: unset !important;
+      }
+      .hiw-grid::-webkit-scrollbar { display: none; }
+      .hiw-card {
+        flex: 0 0 78% !important;
+        scroll-snap-align: start;
+        min-width: 0;
+      }
+    }
+
+    /* What's included + Requirements: center left column when stacked */
+    @media(max-width:900px) {
+      .two-col-left-center { text-align: center; }
+      .two-col-left-center .btn { display: inline-block; }
+    }
+
+    /* Community section: stack to single column */
+    @media(max-width:900px) {
+      .community-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
+    }
+
+    /* Report: Build Readiness 3-col → 1-col on mobile */
+    @media(max-width:600px) {
+      .readiness-grid { grid-template-columns: 1fr !important; }
+    }
+
+    /* Report: clip thumbnails taller and visible on mobile */
+    @media(max-width:900px) {
+      .rpt-clip-gthumb { height: 140px !important; }
+      .rpt-clip-gthumb > div { height: 100% !important; }
+    }
+
+    /* Report: prevent inline wide content stretching on mobile */
+    @media(max-width:600px) {
+      .rpt-section-body { overflow-x: hidden; }
+      .rpt-section-body [style*="display:grid"] { min-width: 0; }
+      .rpt-section-body [style*="grid-template-columns:1fr 1fr 1fr"] { grid-template-columns: 1fr !important; }
+      .rpt-section-body [style*="grid-template-columns: 1fr 1fr 1fr"] { grid-template-columns: 1fr !important; }
+      .rpt-section-body [style*="white-space:nowrap"] { white-space: normal !important; }
+      .rpt-funnel { flex-wrap: wrap; gap: 8px; }
+      .rpt-funnel-arrow { display: none; }
+    }
+
   </style>
 </head>
 <body>
@@ -987,7 +1059,7 @@
       <div class="hero-grid">
 
         <!-- Left: copy -->
-        <div>
+        <div class="hero-copy">
           <span class="eyebrow">Evidence-backed playtesting for indie games</span>
           <h1 class="h1" style="margin-bottom:20px;">
             Find the player friction<br>your team is too close<br>to see.
@@ -1908,10 +1980,10 @@
   </section>
 
   <!-- ── What's included ── -->
-  <section class="section-py" style="background:var(--blue-lt);">
+  <section class="section-py" id="whats-included" style="background:var(--blue-lt);">
     <div class="container">
       <div class="two-col two-col-center">
-        <div>
+        <div class="two-col-left-center">
           <span class="eyebrow">What's included</span>
           <h2 class="h2" style="margin-bottom:16px;">One package. Everything covered.</h2>
           <p class="body-lg" style="margin-bottom:32px;">We handle recruitment, sessions, evidence review, and report delivery. You receive clear findings backed by real player data.</p>
@@ -3006,7 +3078,7 @@
                 </div>
                 <p style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:6px;font-family:'Plus Jakarta Sans',sans-serif;">Demo-ready with targeted fixes recommended before release.</p>
                 <p style="font-size:13px;color:var(--muted);line-height:1.65;font-family:'Inter',sans-serif;margin-bottom:16px;">Core combat feel and atmosphere are strong enough to ship. Resolving P1 (tutorial enchantment gate) and P2 (inventory UI) before your next public milestone is strongly recommended; these two changes directly address the friction that impacted 7 of 10 players in this session.</p>
-                <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;">
+                <div class="readiness-grid" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;">
                   <div style="padding:12px 14px;background:#fff;border-radius:10px;border:1px solid #C3D9FF;">
                     <p style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--green);margin-bottom:5px;font-family:'Inter',sans-serif;">Ship as-is</p>
                     <p style="font-size:12px;color:var(--navy);line-height:1.4;font-family:'Inter',sans-serif;">Combat feel, visual atmosphere, dungeon art direction, ambient audio</p>
@@ -4226,7 +4298,7 @@
   <section class="section-py" style="background:var(--blue-lt);">
     <div class="container">
       <div class="two-col two-col-center" style="gap:64px;">
-        <div>
+        <div class="two-col-left-center">
           <span class="eyebrow">Requirements</span>
           <h2 class="h2" style="margin-bottom:20px;">What you need to get started.</h2>
           <p class="body-lg" style="margin-bottom:36px;">The technical bar is intentionally low. If you play PC games regularly and can record your screen, you likely have everything you need.</p>
@@ -4565,7 +4637,7 @@
   <!-- ── Discord community ── -->
   <section class="section-py" style="background:#fff;">
     <div class="container">
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;">
+      <div class="community-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;">
         <div>
           <span class="eyebrow">The Community</span>
           <h2 class="h2" style="margin-bottom:20px;">A private space for accepted testers.</h2>
