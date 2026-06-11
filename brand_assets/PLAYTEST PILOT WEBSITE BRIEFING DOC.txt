@@ -1,0 +1,1904 @@
+PLAYTEST PILOT WEBSITE BRIEFING DOCUMENT
+
+Source of truth for website strategy, structure, copy, design direction, and conversion goals
+
+1. DOCUMENT TITLE AND PURPOSE
+
+Document title:
+Playtest Pilot Website Briefing Document
+
+Purpose:
+This document is the website source of truth for Playtest Pilot.
+
+It should be provided alongside the Playtest Pilot logo and brand guidelines so that a web designer, developer, AI website builder, or future AI model can understand exactly what Playtest Pilot is, who it serves, what it offers, how the brand should be positioned, what the website must communicate, and what each page should contain.
+
+The document exists to make sure the website is built consistently, clearly, and strategically.
+
+The website should not feel like a generic gaming website, esports brand, SaaS dashboard, AI tool, or QA bug testing company. It should feel like a premium, trustworthy, indie-friendly player insight service built around real players, clear evidence, and human-reviewed reports.
+
+The website must make the final report feel tangible, valuable, premium, and practical.
+
+The finished website should communicate:
+
+Real players.
+Clear evidence.
+Actionable insight.
+Human-reviewed reports.
+Genre-matched PC playtests.
+A clear €499 introductory package.
+A structured and trustworthy process.
+A sample report that proves the product.
+
+2. BUSINESS OVERVIEW
+
+Playtest Pilot is a done-for-you playtesting service for indie game developers.
+
+It helps indie teams identify where real players get confused, stuck, disengaged, or lose clarity before an important release moment.
+
+Important release moments include:
+
+* Public demo
+* Steam Next Fest
+* Publisher pitch
+* Investor milestone
+* Kickstarter demo
+* Early access update
+* Launch
+* First-time player onboarding review
+* Milestone build review
+
+Playtest Pilot runs structured playtests with genre-matched PC players. These players record gameplay, complete survey feedback, and provide useful player experience data.
+
+Playtest Pilot then reviews the player behaviour, survey responses, repeated friction points, gameplay recordings, clips, and timestamps before delivering a human-reviewed insight report.
+
+The final report is the product.
+
+The report helps developers understand:
+
+* Where players struggled
+* Where players lost clarity
+* Where players got stuck
+* Where players became disengaged
+* What players understood
+* What players missed
+* Which issues appeared across multiple players
+* Which findings are supported by gameplay clips, survey responses, and timestamps
+* Which player-facing issues deserve attention before the next milestone
+
+Playtest Pilot is not a QA testing service. Severe bugs may be noted if they affect the session, but the main focus is player experience, onboarding, clarity, pacing, difficulty, engagement, and first-time player behaviour.
+
+Playtest Pilot is not an AI playtesting company. AI may be used internally to help organise evidence, but the public-facing value is real player behaviour, structured analysis, and human-reviewed reporting.
+
+Playtest Pilot is not a SaaS dashboard. The service is done-for-you and report-led.
+
+3. BRAND POSITIONING
+
+Core positioning:
+Evidence-backed playtest reports for indie developers preparing a demo, milestone, or launch.
+
+Core promise:
+Playtest Pilot shows indie developers where real genre-matched players get confused, stuck, or disengaged, with gameplay clips, survey data, timestamps, and clear priority findings.
+
+Core message:
+Real players. Clear evidence. Actionable insight.
+
+Alternative shorter message:
+Real players. Clear evidence. Better decisions.
+
+What Playtest Pilot is:
+
+* A done-for-you indie game playtesting service
+* A player insight service
+* A structured way to understand first-time player friction
+* A service that turns recorded gameplay and survey data into clear findings
+* A human-reviewed report service backed by real player evidence
+* A focused service for playable PC builds before important release moments
+* A practical support system for indie developers who do not have time to recruit testers, watch hours of footage, and organise scattered feedback themselves
+
+What Playtest Pilot is not:
+
+* Not a QA bug testing company
+* Not a generic gaming brand
+* Not an esports brand
+* Not an AI playtesting company
+* Not an AI-generated report tool
+* Not a SaaS dashboard
+* Not a self-serve analytics platform
+* Not a cheap alternative to larger playtesting platforms
+* Not a service that dictates exact design solutions
+
+Positioning principle:
+The brand should feel professional, trustworthy, indie-friendly, evidence-led, and easy to understand.
+
+Playtest Pilot should be positioned as a guided player insight service for serious indie teams that need clarity before exposing their game to a wider audience.
+
+4. TARGET AUDIENCE
+
+Primary audience:
+Funded indie developers and small indie teams with playable PC builds.
+
+Ideal customer:
+An indie developer or small studio preparing a game for an important public or commercial milestone. They have a playable PC build and need clear evidence about how real players experience the game.
+
+Best-fit use cases:
+
+* Preparing a public demo
+* Preparing for Steam Next Fest
+* Preparing for a publisher pitch
+* Preparing for an investor milestone
+* Preparing a Kickstarter demo
+* Preparing an early access update
+* Preparing for launch
+* Testing onboarding clarity
+* Testing first-time player understanding
+* Testing difficulty, pacing, navigation, UI clarity, or early engagement
+
+Not the target customer:
+
+* Hobbyists with no budget
+* AAA studios
+* Teams only looking for technical QA
+* Teams needing console or mobile testing at launch
+* Developers wanting hundreds of testers
+* Developers wanting a self-serve analytics dashboard
+* Developers expecting exact design instructions without internal review
+
+Audience pain points:
+
+* They are too close to their own game to see first-time player confusion.
+* They do not know if new players understand the objective, controls, UI, or core loop.
+* They need feedback before a public demo, pitch, milestone, early access update, or launch.
+* They know playtesting matters, but recruiting useful players is time-consuming.
+* They do not want to sort through hours of raw footage.
+* They receive scattered feedback from friends, Discord, or community members, but struggle to turn it into clear priorities.
+* They worry about launching a confusing demo.
+* They need evidence before deciding where to spend limited development time.
+* They want feedback from players who actually understand their genre.
+
+Audience buying mindset:
+The buyer is not looking for AI analysis. They are looking for confidence.
+
+They want to know:
+
+* Will first-time players understand my game?
+* Where are players getting stuck?
+* Are players missing important information?
+* Is the onboarding clear?
+* Are players interested enough to continue?
+* What issues are showing up across multiple players?
+* What evidence supports each finding?
+* Can I trust this feedback enough to act on it?
+
+What the audience needs to believe before booking:
+
+* Playtest Pilot understands indie development constraints.
+* The testers are relevant to their game.
+* Their build will be handled confidentially.
+* Testers are under NDA.
+* The report will be practical and evidence-backed.
+* The report will not be vague.
+* The service is not QA testing.
+* The service is not AI-generated feedback.
+* The €499 package has a clear, fixed scope.
+* The final report will save time and help guide development priorities.
+
+5. OFFER DETAILS
+
+Package name:
+Player Insight Playtest
+
+Price:
+€499 introductory package
+
+Package summary:
+A focused, fixed-scope playtest for indie developers preparing a playable PC build before a demo, milestone, Steam Next Fest, publisher pitch, early access update, or launch.
+
+Included:
+
+* 8 to 10 genre-matched PC players
+* 30 to 45 minute structured play sessions
+* Recorded gameplay and audio
+* Player survey and feedback
+* Curated clips and key timestamps
+* Human-reviewed insight report
+* Prioritised player friction list
+* Around 7-day delivery after sessions complete
+
+Best for:
+Playable PC builds where the team needs to understand onboarding, objective clarity, UI clarity, pacing, difficulty, early engagement, navigation, or player confusion before an important release moment.
+
+Important limitations:
+
+* PC builds only at launch
+* Not a technical QA service
+* Not intended for hundreds of testers
+* Not a self-serve analytics dashboard
+* Not intended for console or mobile testing at launch
+* Longer sessions, additional testers, full recording delivery, or debrief calls may require a custom quote
+
+Important small print:
+Final scope and timing are confirmed before booking. Additional testers, longer sessions, full recording delivery, or a debrief call may require a custom quote.
+
+Trust points to include near the offer:
+
+* PC playtests only at launch
+* NDA required for testers
+* Reports are human-reviewed
+* Priority findings are backed by evidence
+* Scope is confirmed before booking
+* Single comments are not treated as priority findings unless supported by wider patterns
+
+6. WEBSITE GOALS
+
+The website must achieve five goals.
+
+Goal 1:
+Explain what Playtest Pilot does within seconds.
+
+Goal 2:
+Make the final report feel tangible, premium, practical, and worth paying for.
+
+Goal 3:
+Build trust with indie developers by clearly explaining the process, scope, confidentiality, tester matching, and evidence-backed reporting.
+
+Goal 4:
+Convert qualified developers into Book a Playtest enquiries.
+
+Goal 5:
+Recruit high-quality testers who can record gameplay, follow instructions, complete surveys, respect NDAs, and provide clear feedback.
+
+The website must prove three things within 60 seconds:
+
+1. Playtest Pilot understands the developer’s problem.
+
+2. Playtest Pilot can recruit relevant real players.
+
+3. Playtest Pilot delivers a useful evidence-backed report.
+
+4. WEBSITE STRUCTURE
+
+The launch website should include only five pages.
+
+1. Home
+   Purpose:
+   Explain the core value quickly, show the report as the product, introduce the offer, and route visitors to the Service page, Sample Report page, or Book a Playtest page.
+
+2. Service
+   Purpose:
+   Sell the Player Insight Playtest package in detail, explain who it is for, show what is included, handle objections, show pricing, and include the full FAQ.
+
+3. Sample Report
+   Purpose:
+   Act as the main proof asset. Show what developers actually receive by presenting a fictional but realistic report preview with evidence, metrics, survey results, findings, clips, and recommendations.
+
+4. Become a Tester
+   Purpose:
+   Recruit quality testers and make the tester pool feel curated, reliable, and relevant.
+
+5. Book a Playtest
+   Purpose:
+   Capture qualified developer leads through a structured project enquiry form.
+
+Do not include at launch:
+
+* Separate FAQ page
+* Separate How It Works page
+* Blog
+* Client portal
+* Checkout
+* SaaS dashboard
+* Tester dashboard
+
+8. NAVIGATION AND CTA STRATEGY
+
+Primary navigation:
+
+* Home
+* Service
+* Sample Report
+* Become a Tester
+* Book a Playtest
+
+The “Book a Playtest” item should be styled as the primary navigation button.
+
+Primary CTA:
+Book a Playtest
+
+Secondary CTA:
+View Sample Report
+
+Other useful CTA labels:
+
+* Book Your Playtest
+* See Full Package
+* Download Sample Report
+* Apply to Become a Tester
+* Submit Request
+* View Process
+* See What’s Included
+
+CTA placement:
+
+* Header navigation
+* Home hero
+* Home package preview
+* Home final CTA
+* Service hero
+* Service pricing section
+* Service final CTA
+* Sample Report hero
+* Sample Report final CTA
+* Become a Tester hero
+* Become a Tester application section
+* Book a Playtest form section
+
+CTA hierarchy:
+Primary conversion action for developers:
+Book a Playtest
+
+Primary proof action:
+View Sample Report
+
+Primary tester action:
+Apply to Become a Tester
+
+CTA styling:
+Primary CTAs should use Bright Blue #2F7BFF with white text.
+Secondary CTAs should use white backgrounds, Bright Blue text, and subtle Blue Grey borders.
+Tertiary links should use Bright Blue as text links with an optional arrow.
+
+9. PAGE-BY-PAGE CONTENT BRIEF
+
+PAGE 1: HOME
+
+Page goal:
+Explain the business quickly, make the report feel tangible, and direct visitors to the Service or Sample Report pages.
+
+Key message:
+Playtest Pilot helps indie teams see where real players get confused, stuck, or disengaged before an important release moment.
+
+Required sections:
+
+1. Hero
+2. Problem
+3. Solution
+4. What you receive
+5. Package preview
+6. How it works
+7. Genre matching
+8. AI transparency
+9. FAQ preview
+10. Final CTA
+
+Hero headline:
+Find the player friction your team is too close to see.
+
+Hero subheadline:
+Playtest Pilot runs structured playtests with genre-matched players and turns recorded gameplay, survey data, and player behaviour into a clear insight report for your next demo, milestone, or launch.
+
+Hero CTAs:
+Primary: Book a Playtest
+Secondary: View Sample Report
+
+Hero trust microcopy:
+PC playtests only at launch. NDA required for testers. Reports are human-reviewed.
+
+Hero visual:
+A light game-world or soft illustrated environment with a polished report preview UI layered over it. The visual should feel connected to indie games without becoming gamer-neon or cartoonish.
+
+Hero report card content:
+
+* Priority Finding
+* Players are not sure where to go next.
+* 7 of 10 players affected
+* 5 clips
+* 6 survey mentions
+* Impact: High
+* Confidence: High
+* Timestamp example: 08:42
+
+Problem section headline:
+You know how your game works. New players do not.
+
+Problem section copy:
+After months of development, it becomes hard to see your game like a first-time player. Objectives feel obvious. Mechanics feel natural. UI labels make sense because your team already knows what they mean.
+
+But new players bring no context. They miss prompts, misunderstand goals, overlook key information, test systems in unexpected ways, and sometimes lose interest before they reach the best parts of your game.
+
+Problem cards:
+
+* Not knowing where to go
+* Missing or ignoring the objective
+* Not realising something was interactable
+* Understanding the mechanic too late
+
+Solution section headline:
+Playtest Pilot shows you what players actually experience.
+
+Solution section copy:
+We handle the test setup, player matching, gameplay collection, survey analysis, evidence review, and final report, so you are not left sorting through scattered feedback or hours of raw footage.
+
+Solution cards:
+
+1. Real players, right for your game
+   Players are selected based on genre fit, platform suitability, availability, and recording readiness.
+
+2. Recorded gameplay and survey data
+   See what players did, where they hesitated, and what they said afterwards.
+
+3. Human-reviewed insight report
+   Findings are grouped, prioritised, and supported with clips, timestamps, survey patterns, and clear recommendations.
+
+4. Curated clips and timestamps
+   Review the key moments without watching every full recording yourself.
+
+What you receive headline:
+A clear report built around evidence, not guesswork.
+
+What you receive copy:
+Each report turns messy playtest data into a practical breakdown your team can review quickly.
+
+Report preview sections:
+
+* Executive summary
+* Player sentiment overview
+* Priority findings
+* Issue evidence table
+* Survey results
+* Gameplay clip references
+* Recommended focus areas
+
+Example report finding:
+Finding:
+Players missed the first objective after the tutorial.
+
+Pattern:
+7 of 10 players hesitated for more than 60 seconds.
+
+Evidence:
+5 gameplay clips, 6 survey mentions.
+
+Impact:
+Players understood the goal after discovering the workbench, but several lost momentum before reaching it.
+
+Recommended focus:
+Where to focus next, not a list of orders.
+
+Package preview headline:
+Player Insight Playtest
+
+Package preview subtitle:
+A fixed-scope playtest for indie developers preparing a demo, milestone, or launch.
+
+Package bullets:
+
+* 8 to 10 genre-matched PC players
+* 30 to 45 minute structured play sessions
+* Recorded gameplay
+* Player survey
+* Curated clips and key timestamps
+* Human-reviewed insight report
+* Prioritised player friction list
+* Around 7-day delivery after sessions complete
+
+Price:
+€499 introductory package
+
+Package microcopy:
+Best for playable PC builds where you need to understand onboarding, clarity, pacing, difficulty, or early engagement.
+
+Small print:
+Introductory fixed-scope package. Additional testers, longer sessions, full recording delivery, or a debrief call may require a custom quote.
+
+How it works:
+
+1. You send your build
+   Share your PC build, genre, milestone, and test goals.
+
+2. We define the test focus
+   We agree the key questions the playtest should answer.
+
+3. We run the playtests
+   Genre-matched players complete structured sessions and surveys.
+
+4. We analyse the evidence
+   We review gameplay, survey data, repeated friction, and key clips.
+
+5. You get the report
+   You receive clear findings, supporting evidence, and recommended focus areas.
+
+Genre matching headline:
+Feedback is only useful when it comes from the right players.
+
+Genre matching copy:
+A cosy sim player, a roguelite player, and a tactical RPG player bring different expectations. If the wrong players test your game, you can end up with feedback that is technically honest but commercially misleading.
+
+Playtest Pilot matches your build with players who actively play your genre, so the feedback is closer to the audience you are trying to reach.
+
+Genre cards:
+
+* Roguelite players understand repetition, builds, challenge, and run variety.
+* Cosy sim players notice pacing, clarity, comfort, and routine.
+* Horror players respond to tension, atmosphere, sound, and vulnerability.
+* Strategy players focus on readability, planning, information, and decision quality.
+
+Supporting line:
+We match based on gameplay habits, not just genre labels.
+
+AI transparency headline:
+AI helps us process evidence faster. Humans make the final call.
+
+AI transparency copy:
+We may use AI-assisted workflows to organise transcripts, survey responses, timestamps, and repeated feedback patterns. Final findings, priority levels, and recommendations are reviewed before delivery.
+
+AI trust bullets:
+
+* AI is used to support evidence processing, not replace player testing.
+* Priority findings are backed by real player behaviour.
+* Reports are reviewed before delivery.
+* Client builds and test materials are handled confidentially.
+
+Homepage FAQ preview:
+Only include four FAQ items.
+
+1. What kind of games do you test?
+   Playable PC builds for indie teams preparing demos, milestones, early access updates, publisher pitches, Steam Next Fest, or launch.
+
+2. How do you keep our build and data secure?
+   Testers sign NDAs before receiving access to unreleased builds. Build access, footage, and feedback are handled confidentially.
+
+3. Is this QA testing?
+   No. This is player experience playtesting. Severe bugs may be noted if they affect the session, but the focus is clarity, onboarding, friction, pacing, and player understanding.
+
+4. When will I receive the report?
+   The target is around 7 days after sessions are completed. Final timing depends on scope, build access, and tester availability.
+
+Homepage final CTA:
+Headline:
+Ready to see how real players experience your game?
+
+Copy:
+Send your build details, milestone, and test goals. We will confirm whether Playtest Pilot is a good fit and recommend the right next step.
+
+CTAs:
+Book a Playtest
+View Sample Report
+
+Required Home visuals:
+
+* Hero report mockup
+* Report card showing a priority finding
+* Four problem cards with simple icons
+* Report preview section
+* Package card
+* Five-step process section
+* Genre-matching cards
+* AI transparency card
+* FAQ preview
+
+PAGE 2: SERVICE
+
+Page goal:
+Sell the Player Insight Playtest package in detail and handle objections.
+
+Key message:
+Everything an indie team needs to test a playable PC build with confidence before a major release moment.
+
+Required sections:
+
+1. Hero
+2. Metrics strip
+3. Who this is for
+4. What’s included
+5. What you receive
+6. Process
+7. Genre-matched players
+8. Evidence-backed reports
+9. AI-assisted processing
+10. Pricing
+11. Full FAQ
+12. Final CTA
+
+Hero headline:
+Everything you need to test with confidence.
+
+Hero subheadline:
+A focused playtesting package for indie teams preparing a playable PC build before a demo, milestone, Steam Next Fest, publisher pitch, early access update, or launch.
+
+Hero CTAs:
+Book Your Playtest
+View Sample Report
+
+Trust line:
+Fixed-scope package. PC builds only. NDA required for testers. Reports are human-reviewed.
+
+Metrics strip:
+
+* 8 to 10 genre-matched PC players
+* 30 to 45 minutes per session
+* Around 7 days delivery after sessions complete
+* €499 introductory package
+
+Who this is for headline:
+Built for indie teams with a playable build and real questions.
+
+Good fit if you are:
+
+* Preparing for Steam Next Fest
+* Building a case for a publisher pitch
+* Launching a Kickstarter demo
+* Shipping an early access update
+* Trying to solve onboarding or clarity questions
+* Testing a playable PC build before a public release moment
+
+Not the right fit if you:
+
+* Need bug QA or technical QA only
+* Do not have a playable build yet
+* Need console or mobile testing at launch
+* Want hundreds of testers
+* Expect a self-serve analytics dashboard
+* Want exact design instructions without reviewing trade-offs internally
+
+What’s included:
+
+* Genre-matched PC players
+* Structured play sessions
+* Recorded gameplay
+* Player survey
+* Evidence review
+* Curated clips and timestamps
+* Insight report
+* Priority list
+
+What you receive headline:
+You receive a report your team can actually use.
+
+What you receive copy:
+The final report is designed to be read quickly, discussed internally, and turned into practical development decisions.
+
+Report contents:
+
+* Test setup summary
+* Player profile summary
+* Executive summary
+* Top priority findings
+* Issue evidence table
+* Survey results
+* Gameplay clip references
+* Recommended focus areas
+* Key player comments
+
+Example issue table:
+Columns:
+
+* Issue
+* Evidence
+* Impact
+* Frequency
+* Priority
+
+Rows:
+
+1. Players miss where to go next
+   Evidence: 7/10 missed objective
+   Impact: High
+   Frequency: 70%
+   Priority: High
+
+2. Combat tutorial is too long
+   Evidence: 6/10 early drop-offs
+   Impact: Medium
+   Frequency: 60%
+   Priority: High
+
+3. Resource icons are unclear
+   Evidence: 5/10 confused comments
+   Impact: Medium
+   Frequency: 50%
+   Priority: Medium
+
+4. Map legend is not understood
+   Evidence: 4/10 did not use map
+   Impact: Low
+   Frequency: 40%
+   Priority: Low
+
+5. Menu navigation feels slow
+   Evidence: 3/10 mentioned
+   Impact: Low
+   Frequency: 30%
+   Priority: Low
+
+Process section:
+
+1. Submit project details
+   Tell us about your game, milestone, and test goals.
+
+2. Confirm playtest focus
+   We agree the core questions and session scope.
+
+3. Recruit genre-matched players
+   We handpick players who fit your genre and platform.
+
+4. Run sessions
+   Players complete structured sessions and surveys.
+
+5. Analyse the evidence
+   We review repeated friction, survey data, clips, and player behaviour.
+
+6. Deliver the report
+   You receive findings, clips, priorities, and recommended focus areas.
+
+Genre-matched players headline:
+Why genre-matched players matter
+
+Relevant feedback:
+
+* Understand the genre
+* Know the expectations
+* Spot what breaks immersion
+* Give actionable advice
+
+Random feedback:
+
+* Miss genre conventions
+* Give generic input
+* Less useful for decisions
+* Harder to act on
+
+Supporting line:
+Genre matching does not make feedback perfect, but it makes it more relevant.
+
+Evidence-backed reports headline:
+Opinions are useful. Behaviour is stronger.
+
+Contrast:
+Opinion:
+“I was a bit confused.”
+
+Behaviour:
+7 of 10 players missed the objective marker.
+
+Supporting line:
+The report connects what players said with what they actually did.
+
+Evidence sources:
+
+* What players did
+* Where they hesitated
+* What they missed
+* What they repeated
+* What they said in surveys
+* Which issues appeared across multiple players
+* Which moments are supported by clips
+
+AI section headline:
+AI-assisted processing. Human-reviewed insight.
+
+AI section copy:
+AI helps organise data, themes, transcripts, survey responses, and timestamps. Human reviewers validate findings and judge impact.
+
+Trust cards:
+
+* AI supports evidence organisation
+* Humans review priority findings
+* Client data is handled confidentially
+* Real players remain the source of insight
+
+Pricing headline:
+Introductory package
+
+Package name:
+Player Insight Playtest
+
+Price:
+€499
+
+Includes:
+
+* 8 to 10 genre-matched PC players
+* 30 to 45 minute play sessions
+* Recorded gameplay and audio
+* Player survey and feedback
+* Curated clips and timestamps
+* Human-reviewed insight report
+* Prioritised friction list
+* Around 7-day delivery
+
+Best for:
+Playable PC builds preparing for a demo, milestone, Steam Next Fest, early access update, or launch readiness review.
+
+Small print:
+Final scope and timing are confirmed before booking. Additional testers, longer sessions, full recording delivery, or a debrief call may require a custom quote.
+
+Service FAQ:
+This is the full FAQ. Do not duplicate it as a separate FAQ page.
+
+1. Is this QA testing?
+   No. This is player experience playtesting. We focus on onboarding, clarity, engagement, pacing, difficulty, friction, and player understanding. Severe bugs may be noted if they affect the session, but bug finding is not the main service.
+
+2. Do testers sign an NDA?
+   Yes. Testers must sign an NDA before receiving access to unreleased builds.
+
+3. Do I need a complete game?
+   No. You need a playable PC build with enough content for the agreed session length.
+
+4. Can I choose the playtest focus?
+   Yes. Before testing begins, we define the main questions you want answered.
+
+5. Can you test any genre?
+   Not always. If we cannot recruit suitable players for your genre, we will say so before taking the booking.
+
+6. Do I get all recordings?
+   The standard package includes curated clips and timestamps. Full recordings can be made available depending on scope, upload requirements, and file size.
+
+7. How long does delivery take?
+   The target is around 7 days after sessions are completed. Final timing depends on tester availability, scope, and build access.
+
+8. What happens if a tester has technical problems?
+   The session may be replaced or excluded depending on the issue. Only valid completed sessions should count in the final report.
+
+9. How do you avoid biased findings?
+   Findings are based on repeated player behaviour, survey data, and supporting evidence. Single comments are treated as individual player comments unless supported by wider patterns.
+
+10. What platforms do you support?
+    PC builds only at launch.
+
+11. Is my build and data secure?
+    Build access, footage, survey responses, and report materials are handled confidentially. Testers sign NDAs before accessing unreleased builds.
+
+12. Is AI writing the report?
+    AI may support transcription, clustering, and evidence organisation. Final findings, priorities, and recommendations are reviewed by Playtest Pilot before delivery.
+
+Final CTA:
+Headline:
+Give your next build a real first-player check.
+
+Subheadline:
+Real players. Real behaviour. Real insight.
+
+CTAs:
+Book Your Playtest
+View Sample Report
+
+Required Service visuals:
+
+* Package card
+* Metrics strip
+* Good fit and not-fit cards
+* Inclusion icon row
+* Report contents mockup
+* Example issue table
+* Process timeline
+* Relevant vs random feedback comparison
+* Evidence-backed behaviour card
+* AI transparency card
+* Pricing card
+* FAQ accordion
+
+PAGE 3: SAMPLE REPORT
+
+Page goal:
+Show the actual deliverable Playtest Pilot provides.
+
+Key message:
+The report is built around real player evidence, not opinions.
+
+Required sections:
+
+1. Hero
+2. Report cover mockup
+3. Executive summary
+4. Key findings
+5. Evidence matrix
+6. Survey results
+7. Gameplay clip evidence
+8. Recommendations
+9. Fictional report disclaimer
+10. Final CTA
+
+Hero eyebrow:
+Sample Report
+
+Hero headline:
+See the clarity we deliver.
+
+Hero subheadline:
+Every report is built around real player evidence, not opinions, so your team can make better decisions with confidence.
+
+Hero CTAs:
+Download Sample Report
+Book a Playtest
+
+Fictional game:
+Emberwake Hollow
+
+Fictional test objective:
+Evaluate first-time player clarity, onboarding, objective understanding, and early engagement during the first 45 minutes.
+
+Report tabs:
+
+* Executive Summary
+* Key Findings
+* Evidence
+* Survey Results
+* Recommendations
+
+Executive summary metrics:
+
+* Players tested: 10
+* Session length: 30 to 45 min
+* Build version: v0.3.2
+* Overall impression: 7.2/10
+
+Top finding card:
+Top Finding:
+42% of players did not realise they could craft items.
+
+Severity:
+High
+
+Players affected:
+6/10
+
+Average time:
+12 to 18 min
+
+Evidence matrix:
+Columns:
+
+* Issue
+* Players affected
+* Evidence
+* Impact
+* Priority
+
+Rows:
+
+1. Missed first objective
+   Players affected: 7/10
+   Evidence: 5 clips, 6 survey mentions
+   Impact: High
+   Priority: High
+
+2. Unclear crafting system
+   Players affected: 6/10
+   Evidence: 4 clips, 6 survey mentions
+   Impact: High
+   Priority: High
+
+3. Navigation confusion in world
+   Players affected: 4/10
+   Evidence: 3 clips, 5 survey mentions
+   Impact: Medium
+   Priority: Medium
+
+4. Combat feedback readability
+   Players affected: 3/10
+   Evidence: 2 clips, 4 survey mentions
+   Impact: Medium
+   Priority: Medium
+
+5. Menu text density
+   Players affected: 2/10
+   Evidence: 1 clip, 2 survey mentions
+   Impact: Low
+   Priority: Low
+
+Survey cards:
+
+* Objective clarity
+* Tutorial pacing
+* Enjoyment
+* Would you continue playing?
+* Top open-text themes
+
+Gameplay clip example:
+Clip 03:
+Player wanders past the first objective.
+
+What happened:
+Player explored the area for around one minute without interacting with the glowing objective marker.
+
+Why it matters:
+The objective’s purpose and location were not clear to the player.
+
+Tags:
+
+* Objective Clarity
+* Navigation
+* UI
+
+Priority finding example:
+Finding:
+Players missed the first objective after the tutorial.
+
+Players affected:
+7/10
+
+Evidence:
+5 clips and 6 survey mentions
+
+Why it matters:
+Without the objective, players do not understand what to do next and engagement drops.
+
+Recommended focus:
+Make the first objective clearer and more difficult to miss.
+
+Required disclaimer:
+This is a fictional sample report created to show the format, evidence style, and level of detail developers can expect.
+
+Final CTA:
+Headline:
+Want the full breakdown?
+
+Copy:
+Download the complete sample report or book a playtest for your own project.
+
+CTAs:
+Download Sample Report
+Book a Playtest
+
+Required Sample Report visuals:
+
+* Dark navy hero area
+* Report cover mockup
+* Floating metric cards
+* Tabbed report section
+* Evidence matrix
+* Survey result chart cards
+* Gameplay clip card with timestamp
+* Priority finding card
+* Recommended focus card
+* Download CTA
+
+PAGE 4: BECOME A TESTER
+
+Page goal:
+Recruit quality testers and make the tester pool feel curated, reliable, and genre-relevant.
+
+Key message:
+Testers help indie developers improve games by playing unreleased PC builds, recording gameplay, and giving clear feedback.
+
+Required sections:
+
+1. Hero
+2. What testers do
+3. Who should apply
+4. Requirements
+5. Recording and feedback expectations
+6. Genre interest section
+7. Tester profile cards
+8. NDA and privacy
+9. Application form
+
+Hero headline:
+Help shape great games. Get paid to playtest.
+
+Hero subheadline:
+Join our community of trusted playtesters and help indie developers build better games.
+
+Hero CTAs:
+Apply to Become a Tester
+How It Works
+
+What testers do:
+
+1. Play unreleased games
+   Experience new games at different stages of development.
+
+2. Answer surveys
+   Share your thoughts through guided surveys.
+
+3. Help improve games
+   Your feedback helps developers improve clarity, pacing, and player experience.
+
+4. Get paid for your time
+   Complete playtests and receive fair compensation.
+
+Who should apply headline:
+Passionate players with honest opinions.
+
+Who should apply bullets:
+
+* Enjoy a variety of PC games
+* Can communicate clearly
+* Provide honest feedback
+* Meet deadlines and follow instructions
+
+Requirements:
+
+* 18+ years old
+* Fluent in English
+* Windows PC with recorded gameplay capability
+* Stable internet connection
+* Microphone optional but beneficial
+* Willing to sign an NDA
+
+Recording and feedback expectations:
+
+1. Gameplay recording
+   You must be able to record your screen and game audio clearly.
+
+2. Survey completion
+   You must complete the feedback survey after the session.
+
+3. Clear communication
+   You should explain what confused you, what worked, and what felt unclear.
+
+4. Reliability
+   You must complete sessions on time and follow the test instructions.
+
+Tester profile cards should show:
+
+* Name
+* Main genre interest
+* Favourite genres
+* Recent games
+* PC ready
+* Recording ready
+* Reliability score
+
+NDA and privacy headline:
+Your privacy is protected.
+
+NDA and privacy copy:
+We take confidentiality seriously so developers can trust our testers with unreleased games.
+
+Privacy bullets:
+
+* NDA required before any test
+* Unreleased builds stay private
+* We respect client materials
+* No public sharing or spoilers
+
+Tester CTA:
+Apply to Become a Tester
+
+Required Become a Tester visuals:
+
+* Clean tester hero
+* PC gaming setup or monitor visual
+* Tester profile overlay cards
+* What testers do cards
+* Requirements cards
+* Recording and feedback expectations cards
+* NDA and privacy card
+* Application form
+
+PAGE 5: BOOK A PLAYTEST
+
+Page goal:
+Capture qualified developer leads.
+
+Key message:
+Tell Playtest Pilot about your game, build, milestone, and test goals so the right playtest plan can be confirmed.
+
+Required sections:
+
+1. Hero
+2. Support cards
+3. Structured enquiry form
+4. What happens next
+5. Fit expectations
+6. Confidentiality reassurance
+7. Final CTA
+
+Hero headline:
+Let’s test your game.
+
+Hero subheadline:
+Tell us about your build and we’ll create a playtest plan tailored to your goals.
+
+Trust microcopy:
+We’ll confirm fit and next steps, usually within 1 to 2 business days.
+
+Support cards:
+
+1. Sample Report
+   Actionable insights from real players.
+   CTA: View sample report
+
+2. How It Works
+   See how our playtests work.
+   CTA: View process
+
+What happens next:
+
+1. We review your request
+   We review your game details, goals, and build access.
+
+2. We confirm scope and fit
+   We confirm whether Playtest Pilot is a good fit and recommend the right test plan.
+
+3. We prepare your playtest plan
+   You receive the proposed focus, session structure, timeline, and next steps.
+
+4. We schedule and start
+   We recruit testers, confirm access, and begin testing.
+
+Fit expectations headline:
+Is Playtest Pilot a good fit?
+
+We’re a good fit if:
+
+* You have a playable PC build
+* You want real player insight, not bug testing
+* You want support turning feedback into clearer priorities
+* You plan to act on the results
+
+Not the best fit yet if:
+
+* You do not have a playable build
+* You need technical QA or bug reporting only
+* You need mobile or console testing at launch
+* You want thousands of responses or paid user acquisition
+* You expect a self-serve dashboard
+
+Confidentiality headline:
+Your game is in good hands.
+
+Confidentiality cards:
+
+1. Care and confidentiality
+   We treat every project with care and confidentiality.
+
+2. Secure handling
+   Your build and data are handled securely.
+
+3. Honest fit check
+   If your project is not a fit, we will tell you honestly.
+
+Small line:
+Your information is secure and never shared.
+
+Final CTA:
+Headline:
+Ready to get player insight?
+
+Copy:
+Submit your request and we’ll be in touch soon.
+
+Button:
+Submit Request
+
+Required Book a Playtest visuals:
+
+* Clean hero with project enquiry framing
+* Support cards linking to Sample Report and process
+* Large structured form
+* What happens next cards
+* Good fit and not-fit cards
+* Confidentiality reassurance cards
+
+10. SAMPLE REPORT CONTENT DIRECTION
+
+The Sample Report page is one of the most important pages on the website because it shows what the developer is actually buying.
+
+The report should not look like a SaaS dashboard. It should feel like a polished report deliverable with UI-style evidence cards, survey panels, and gameplay clip references.
+
+Fictional game:
+Emberwake Hollow
+
+Fictional test objective:
+Evaluate first-time player clarity, onboarding, objective understanding, and early engagement during the first 45 minutes.
+
+The sample report should include:
+
+* Report cover mockup
+* Test objective
+* Player profile summary
+* Executive summary
+* Overall impression score
+* 3 to 5 key findings
+* Priority issue table
+* Survey results
+* Gameplay clip evidence
+* Recommended focus areas
+* Short disclaimer that the report is fictional
+
+Important report principles:
+
+* Every priority finding should show players affected
+* Every priority finding should show evidence type
+* Every priority finding should show impact
+* Every priority finding should show confidence or priority
+* Single comments should not be presented as priority findings unless supported by wider patterns
+* Survey data and gameplay behaviour should support the written analysis
+* Recommended focus areas should be framed as guidance, not orders
+
+Sample report disclaimer:
+This is a fictional sample report created to show the format, evidence style, and level of detail developers can expect.
+
+Required sample report visual components:
+
+* Executive summary cards
+* Priority finding cards
+* Evidence matrix table
+* Survey result cards
+* Gameplay clip evidence cards
+* Timestamp chips
+* Recommended focus card
+* Priority and confidence badges
+
+11. VISUAL DESIGN DIRECTION
+
+Overall style:
+Premium, clean, indie-friendly, evidence-led, calm, modern, and trustworthy.
+
+The site should feel like a professional player insight service for serious indie developers.
+
+It should not feel like:
+
+* A generic gaming website
+* An esports brand
+* A dark neon game community
+* A SaaS analytics dashboard
+* A QA testing company
+* An AI tool
+
+Primary brand colours:
+
+* Deep Navy: #1E2430
+  Use for primary text, headings, icons, and dark sections.
+
+* Bright Blue: #2F7BFF
+  Use for primary brand colour, CTAs, links, accents, and important actions.
+
+* White: #FFFFFF
+  Use for backgrounds, cards, and surfaces.
+
+* Light Blue: #F0F5FF
+  Use for section backgrounds and soft surfaces.
+
+* Blue Grey: #E6EBF3
+  Use for borders, dividers, and subtle UI.
+
+Evidence and status colours:
+
+* Success Green: #22C55E
+  Use for positive findings and strengths.
+
+* Warning Amber: #F59E0B
+  Use for medium priority and caution areas.
+
+* High Priority Red: #EF4444
+  Use for high-priority friction or issues.
+
+* Neutral Grey: #64748B
+  Use for secondary text and muted elements.
+
+Colour usage rules:
+
+* The website should be designed primarily for light or white backgrounds.
+* Use Deep Navy for authority, trust, readability, and dark contrast sections.
+* Use Bright Blue sparingly but consistently for important actions and key emphasis.
+* Use Light Blue and Blue Grey to create calm section separation.
+* Use evidence and status colours only for report indicators, priorities, confidence, and evidence categories.
+* Do not allow red, amber, or green to dominate the UI.
+* Keep the overall appearance clean, calm, and professional.
+
+Typography:
+Primary headings:
+Plus Jakarta Sans, Bold or ExtraBold.
+
+Body copy:
+Inter, Regular or Medium.
+
+UI labels and buttons:
+Inter, Medium or SemiBold.
+
+Typography rules:
+
+* H1 should be large, bold, and confident.
+* H2 should be clear and structured.
+* Body copy should be easy to scan.
+* UI labels should be concise.
+* Small labels may use all caps sparingly for section labels or badges.
+* Buttons should use Inter SemiBold.
+
+UI component style:
+
+* Rounded cards
+* Light borders using Blue Grey
+* Soft shadows
+* Clean tables
+* Priority and confidence badges
+* Rounded buttons
+* Report and product mockups
+* Section backgrounds that alternate subtly
+* Clear hierarchy between primary, secondary, and tertiary actions
+
+Button styles:
+Primary CTA:
+
+* Background: Bright Blue #2F7BFF
+* Text: White
+* Rounded corners
+* Clear hover state using a slightly darker blue
+* Example labels: Book a Playtest, Book Your Playtest, Submit Request
+
+Secondary CTA:
+
+* Background: White
+* Text: Bright Blue #2F7BFF
+* Border: Blue Grey #E6EBF3
+* Rounded corners
+* Clear hover state
+* Example labels: View Sample Report, See Full Package
+
+Tertiary CTA:
+
+* Text link using Bright Blue #2F7BFF
+* Optional arrow
+* Optional underline on hover
+* Example label: See What’s Included
+
+Icon style:
+Use clean, rounded, minimal line icons with consistent stroke weight.
+
+Approved icon concepts:
+
+* Genre-matched player
+* Gameplay recording
+* Survey feedback
+* Evidence report
+* Timestamped clip
+* NDA or security protected
+* Priority finding
+* PC build
+* Report document
+* Magnifying glass
+* Clip marker
+
+Icon rules:
+
+* Use Deep Navy for default icons.
+* Use Bright Blue for active or accent states.
+* Keep icons simple and intuitive.
+* Avoid overly complex icons.
+* Avoid decorative icons that distract from the service.
+
+Avoid these icon and visual styles:
+
+* Aviation visuals
+* Planes
+* Cockpits
+* Pilot helmets
+* Flight dashboards
+* AI robots
+* Generic startup people
+* Childish gamepad icons
+* Dark gamer neon styling
+* Esports visuals
+
+Report and product mockup style:
+The website should use polished report and product mockups that follow the brand UI style.
+
+Report mockups should include:
+
+* Executive summary cards
+* Top priority finding cards
+* Evidence matrix tables
+* Survey result cards
+* Gameplay clip evidence cards
+* Recommended focus cards
+* Priority badges
+* Confidence badges
+* Timestamp chips
+
+Report mockup design rules:
+
+* Use White cards.
+* Use Blue Grey borders.
+* Use Deep Navy headings.
+* Use Bright Blue for key actions.
+* Use High Priority Red, Warning Amber, Success Green, and Neutral Grey only for evidence or status indicators.
+* Keep report mockups clean, readable, and trustworthy.
+* Make the report feel like a deliverable worth paying for.
+
+Imagery style:
+Use soft game-world environments and abstract gameplay-inspired visuals. The site should feel connected to games without looking like a gaming fan site.
+
+Preferred visual direction:
+
+* Light fantasy or game-world hero scenes
+* Soft illustrated environments
+* Report UI overlays
+* Gameplay preview cards
+* Survey charts
+* Evidence tables
+* Clean report mockups
+* Minimal iconography
+
+Avoid:
+
+* Overly dark backgrounds
+* Busy game art
+* Real game IP
+* Stock gamepad graphics
+* Generic SaaS dashboards
+* AI robot imagery
+* Aviation metaphors
+
+12. TRUST AND OBJECTION HANDLING
+
+Objection:
+Is this QA testing?
+
+Website answer:
+No. Playtest Pilot focuses on player experience, onboarding, clarity, pacing, difficulty, friction, and player understanding. Severe bugs may be noted if they affect the session, but bug finding is not the main service.
+
+Objection:
+Are testers under NDA?
+
+Website answer:
+Yes. Testers sign NDAs before receiving access to unreleased builds.
+
+Objection:
+Is my build safe?
+
+Website answer:
+Build access, gameplay footage, survey responses, and report materials are handled confidentially. This should be explained clearly on the Service and Book a Playtest pages.
+
+Objection:
+What do I actually receive?
+
+Website answer:
+The website must show the report clearly. It should show report sections, example findings, survey results, evidence tables, clips, timestamps, and recommended focus areas.
+
+Objection:
+Are these random testers?
+
+Website answer:
+No. Players are selected based on genre fit, platform suitability, availability, and recording readiness. The website should explain that genre matching improves relevance.
+
+Objection:
+Do I get full recordings?
+
+Website answer:
+The standard package includes curated clips and timestamps. Full recordings can be made available depending on scope, upload requirements, and file size.
+
+Objection:
+Is AI writing the report?
+
+Website answer:
+AI may support transcription, clustering, and evidence organisation. Final findings, priorities, and recommendations are reviewed by Playtest Pilot before delivery.
+
+Objection:
+What if my build is rough?
+
+Website answer:
+The service is designed for playable builds, demos, vertical slices, milestone builds, early access updates, and launch candidates. The build does not need to be finished, but it must be playable enough for the agreed session length.
+
+Objection:
+Why not just ask my Discord?
+
+Website answer:
+Community feedback can be useful, but community members may already understand the game, may be biased toward the project, or may not behave like fresh players. Playtest Pilot focuses on structured sessions with players selected for genre relevance.
+
+Objection:
+Why is this worth €499?
+
+Website answer:
+The value is not just collecting opinions. The value is recruiting relevant players, collecting recorded gameplay and survey data, reviewing the evidence, identifying repeated friction, and delivering a clear report that saves the developer time and supports better decisions before a public release moment.
+
+13. AI TRANSPARENCY GUIDANCE
+
+AI should be mentioned honestly but not heavily.
+
+Good AI positioning:
+AI helps us process evidence faster. Humans make the final call.
+
+Approved AI copy:
+We may use AI-assisted workflows to organise transcripts, survey responses, timestamps, and repeated feedback patterns. Final findings, priority levels, and recommendations are reviewed before delivery.
+
+Approved AI trust bullets:
+
+* AI supports evidence organisation.
+* AI does not replace real players.
+* AI does not independently decide what developers should change.
+* Final reports are human-reviewed.
+* Priority findings are backed by real player behaviour.
+
+Do not say:
+
+* AI-generated reports
+* AI playtesting company
+* Automated player insight
+* Let AI decide what to fix
+* AI replaces user research
+* AI-powered recommendations as the main promise
+* AI-powered playtesting revolution
+
+Visual rule:
+Do not use AI robot imagery. If AI is visualised, use evidence-processing visuals such as transcript cards, checkmarks, document flows, organised data, or report cards.
+
+14. COPYWRITING RULES
+
+Tone:
+
+* Clear
+* Direct
+* Practical
+* Trustworthy
+* Evidence-led
+* Calm
+* Confident but not overhyped
+* Professional but indie-friendly
+* Helpful, not preachy
+
+Preferred phrases:
+
+* Real players
+* Clear evidence
+* Actionable insight
+* Better decisions
+* Where to focus next
+* Recommended focus areas
+* Which player-facing issues deserve attention first
+* Human-reviewed insight report
+* Evidence-backed findings
+* Genre-matched PC players
+* Curated clips and timestamps
+* Player behaviour, survey data, and supporting evidence
+* First-time player friction
+* Before your next demo, milestone, or launch
+* Reports are human-reviewed
+* PC builds only at launch
+* NDA required for testers
+* Evidence-backed playtest reports for indie developers
+* Find the player friction your team is too close to see
+* AI helps organise evidence. Humans make the final call.
+
+Banned or discouraged phrases:
+
+* What to fix first
+* We tell you exactly what to fix
+* AI-generated reports
+* AI playtesting company
+* Cheap alternative to PlaytestCloud
+* QA testing as the main service
+* Trusted by indie developers, unless proof exists
+* Dashboard
+* Self-serve analytics platform
+* Automated insight engine as the main offer
+* Guaranteed better game
+* Bug testing service
+
+Weak wording:
+We help you improve your game.
+
+Stronger wording:
+We show you where real players get confused, stuck, or disengaged before your next demo, milestone, or launch.
+
+Weak wording:
+Get AI-powered feedback.
+
+Stronger wording:
+Get a human-reviewed insight report backed by recorded gameplay, survey data, and player behaviour.
+
+Weak wording:
+Find out what to fix first.
+
+Stronger wording:
+See which player-facing issues deserve attention before your next release moment.
+
+Weak wording:
+Our testers give feedback.
+
+Stronger wording:
+Genre-matched players record gameplay, complete structured surveys, and reveal where first-time players lose clarity.
+
+Weak wording:
+Playtest Pilot is an affordable testing platform.
+
+Stronger wording:
+Playtest Pilot is a done-for-you playtesting service that turns real player sessions into clear evidence-backed reports.
+
+15. SEO GUIDANCE
+
+Home page title:
+Playtest Pilot | Evidence-backed playtesting for indie games
+
+Home page meta description:
+Playtest Pilot helps indie developers find where real players get confused, stuck, or disengaged with genre-matched PC playtests, recorded gameplay, survey data, and human-reviewed insight reports.
+
+Service page title:
+Player Insight Playtest | Playtest Pilot
+
+Service page meta description:
+A fixed-scope playtest package for indie teams preparing a demo, milestone, Steam Next Fest build, early access update, or launch.
+
+Sample Report page title:
+Sample Playtest Report | Playtest Pilot
+
+Sample Report page meta description:
+See an example of the evidence-backed insight report Playtest Pilot delivers, including priority findings, survey results, gameplay clips, timestamps, and recommended focus areas.
+
+Become a Tester page title:
+Become a Game Tester | Playtest Pilot
+
+Become a Tester page meta description:
+Apply to join the Playtest Pilot tester pool and get paid to test indie PC games before release.
+
+Book a Playtest page title:
+Book a Playtest | Playtest Pilot
+
+Book a Playtest page meta description:
+Submit your game details, milestone, build status, and test goals to book a Playtest Pilot player insight playtest.
+
+16. FORM REQUIREMENTS
+
+Book a Playtest form:
+
+Required fields:
+
+* Name
+* Email
+* Studio name
+* Game title
+* Website or Steam page
+* Genre
+* Platform
+* Build status
+* Target milestone
+* Desired test timing
+* What do you most need to learn?
+* Any known issues to ignore?
+* Is the build under NDA?
+* How will testers access your build?
+
+Optional fields:
+
+* Preferred number of testers
+* Preferred session length
+* Budget range
+* Anything else we should know?
+
+Recommended structure:
+If the form feels too long visually, split it into two steps.
+
+Step 1:
+Project basics
+
+Step 2:
+Playtest goals
+
+Book a Playtest form success message:
+Thanks for sending your project details. We will review your game, build status, and playtest goals, then confirm whether Playtest Pilot is a good fit and recommend the next step.
+
+Become a Tester form:
+
+Required fields:
+
+* Full name
+* Email address
+* Favourite genres
+* PC specs
+* Recording setup
+* Availability
+* Discord username
+* Country or time zone
+* Recent games played
+* Why do you want to become a tester?
+
+Optional fields:
+
+* Steam profile
+* Preferred playtest times
+* Microphone availability
+* Previous testing experience
+* Notes on accessibility needs or technical limitations
+
+Tester form small print:
+We review every application by hand. Your information is kept private.
+
+Tester form success message:
+Thanks for applying to become a Playtest Pilot tester. We review every application by hand and will contact you if you are a good fit for upcoming playtests.
+
+17. FINAL WEBSITE QUALITY CHECKLIST
+
+Business clarity:
+
+* The homepage explains what Playtest Pilot does within seconds.
+* The site clearly positions Playtest Pilot as a done-for-you indie playtesting service.
+* The site does not position Playtest Pilot as an AI company.
+* The site does not make the service sound like QA testing.
+* The site does not make the service look like a SaaS dashboard.
+* The product is clearly shown as the final human-reviewed report.
+
+Offer clarity:
+
+* The Player Insight Playtest package is clearly explained.
+* The €499 introductory price is visible.
+* The 8 to 10 player scope is clear.
+* The 30 to 45 minute session length is clear.
+* PC builds only at launch is clearly stated.
+* NDA required for testers is clearly stated.
+* Reports are human-reviewed is clearly stated.
+* Scope confirmed before booking is clearly stated.
+* Additional testers, longer sessions, full recording delivery, or a debrief call may require a custom quote is clearly stated.
+
+Report proof:
+
+* The report is shown as the core product.
+* The Sample Report page feels tangible and premium.
+* The fictional sample report disclaimer is included.
+* The evidence matrix includes players affected, evidence, impact, and priority.
+* Survey result cards are included.
+* Gameplay clip evidence is included.
+* Recommended focus areas are included.
+* Report mockups follow the Playtest Pilot brand UI style.
+
+Trust:
+
+* The website explains tester NDAs.
+* The website explains confidentiality.
+* The website explains that testers are genre-matched.
+* The website explains that AI assists evidence organisation but does not replace human review.
+* The website explains that single comments are not treated as priority findings unless supported by wider patterns.
+* The website does not include unsupported claims such as “trusted by indie developers” unless proof exists.
+
+Page structure:
+
+* The launch site contains Home, Service, Sample Report, Become a Tester, and Book a Playtest.
+* There is no separate FAQ page.
+* There is no separate How It Works page.
+* The full FAQ appears only on the Service page.
+* The homepage contains only a short FAQ preview.
+* The Book a Playtest page has a structured enquiry form.
+* The Become a Tester page has recording and reliability expectations.
+
+Visual design:
+
+* The design follows the Playtest Pilot brand guidelines.
+* The logo is not altered, stretched, rotated, recoloured, or changed.
+* The logo is used primarily on light or white backgrounds.
+* The design uses Deep Navy #1E2430 correctly.
+* The design uses Bright Blue #2F7BFF correctly.
+* The design uses White #FFFFFF correctly.
+* The design uses Light Blue #F0F5FF correctly.
+* The design uses Blue Grey #E6EBF3 correctly.
+* Success Green #22C55E, Warning Amber #F59E0B, High Priority Red #EF4444, and Neutral Grey #64748B are used only for evidence and status indicators.
+* The design uses Plus Jakarta Sans for primary headings.
+* The design uses Inter for body copy, labels, and buttons.
+* The site uses report UI cards, gameplay evidence cards, survey charts, and evidence tables.
+* The design avoids dark gamer neon styling.
+* The design avoids robot imagery.
+* The design avoids aviation imagery.
+* The design avoids generic startup illustrations.
+* CTAs are clear and consistent.
+* The report visuals make the deliverable feel worth paying for.
+
+Copy:
+
+* The site uses “where to focus next” instead of “what to fix first.”
+* The site avoids “AI-generated reports.”
+* The site avoids “cheap alternative” positioning.
+* The site avoids overpromising exact design solutions.
+* The copy is clear, direct, calm, and evidence-led.
+* The copy sounds helpful, not preachy.
+
+Conversion:
+
+* Book a Playtest appears clearly in the navigation.
+* Book a Playtest appears at the top and bottom of key pages.
+* View Sample Report appears as a strong secondary CTA.
+* The Sample Report page acts as the main proof asset.
+* The Service page clearly handles objections.
+* The Book a Playtest form collects enough information to qualify the lead.
+* The Become a Tester form collects enough information to assess tester suitability.
+
+Final standard:
+The finished website should clearly communicate:
+
+Real players.
+Clear evidence.
+Actionable insight.
+Human-reviewed reports.
+Genre-matched PC playtests.
+A clear €499 introductory package.
+A structured, trustworthy process.
+A sample report that proves the product.

@@ -1,0 +1,6 @@
+node_modules/
+temporary screenshots/
+*.py
+*.pdf
+screenshot_*.mjs
+temp_shot.mjs
