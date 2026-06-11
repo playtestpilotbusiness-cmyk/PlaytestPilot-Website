@@ -1014,11 +1014,22 @@
       body { overflow-x: hidden; }
     }
 
-    /* Behaviour: session timeline scrollable with minimum width */
+    /* Behaviour: session timeline - vertical stack on mobile (no swipe) */
     @media(max-width:640px) {
-      .rpt-beh-timeline { overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
-      .rpt-beh-timeline::-webkit-scrollbar { display: none; }
-      .rpt-beh-timeline-bar, .rpt-beh-timeline-timestamps { min-width: 480px; }
+      .rpt-beh-timeline-bar {
+        flex-direction: column !important;
+        height: auto !important;
+        border-radius: 10px !important;
+      }
+      .rpt-beh-timeline-bar > div {
+        width: 100% !important;
+        height: 34px !important;
+        border-right: none !important;
+        border-bottom: 2px solid #fff !important;
+      }
+      .rpt-beh-timeline-bar > div:last-child { border-bottom: none !important; }
+      .rpt-beh-timeline-bar > div span { white-space: normal !important; }
+      .rpt-beh-timeline-timestamps { display: none !important; }
     }
 
     /* Survey S4: Player Voices 2-col → 1-col */
@@ -1029,6 +1040,11 @@
     /* Report S7: tester profiles 2-col → 1-col */
     @media(max-width:640px) {
       .rpt-profiles-grid { grid-template-columns: 1fr !important; }
+    }
+
+    /* Report S7: screening criteria / confidentiality 2-col → 1-col */
+    @media(max-width:600px) {
+      #rpt-s7 [style*="grid-template-columns:1fr 1fr"] { grid-template-columns: 1fr !important; }
     }
 
     /* Tester page: genre cards 3-col → 2-col */
