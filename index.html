@@ -955,23 +955,22 @@
       .hero-copy .trust-strip { justify-content: center; }
     }
 
-    /* How it works: horizontal scroll carousel on mobile */
+    /* How it works: vertical stack on mobile */
     @media(max-width:640px) {
       .hiw-grid {
         display: flex !important;
-        overflow-x: auto !important;
-        scroll-snap-type: x mandatory;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: none;
-        padding-bottom: 8px;
-        gap: 12px !important;
+        flex-direction: column !important;
+        overflow-x: visible !important;
+        scroll-snap-type: none !important;
+        padding-bottom: 0 !important;
+        gap: 10px !important;
         grid-template-columns: unset !important;
       }
-      .hiw-grid::-webkit-scrollbar { display: none; }
       .hiw-card {
-        flex: 0 0 78% !important;
-        scroll-snap-align: start;
-        min-width: 0;
+        flex: none !important;
+        width: 100% !important;
+        min-width: 0 !important;
+        scroll-snap-align: none !important;
       }
     }
 
@@ -1040,6 +1039,62 @@
     /* Tester page: tester pool 3-col → 1-col */
     @media(max-width:640px) {
       .tester-pool-grid { grid-template-columns: 1fr !important; }
+    }
+
+    /* ── MOBILE ROUND 4 ── */
+
+    /* Solution: stack numbered cards vertically (like problem cards) */
+    @media(max-width:640px) {
+      .solution-card { flex-direction: column !important; gap: 10px !important; }
+    }
+
+    /* Package list: keep checkmark items left-aligned inside centered column */
+    @media(max-width:900px) {
+      .two-col-left-center .package-card { text-align: left; }
+    }
+
+    /* Genre matching: fix inline blue-dot text alignment */
+    @media(max-width:900px) {
+      .genre-dot-text { display: flex !important; align-items: flex-start !important; }
+      .genre-dot-text p { text-align: left !important; }
+    }
+
+    /* Behaviour tables: transform into stacked cards on mobile */
+    @media(max-width:600px) {
+      .rpt-beh-table-wrap { overflow: visible !important; border: none !important; border-radius: 0 !important; padding: 0 !important; }
+      .rpt-beh-table { display: block !important; border: none !important; }
+      .rpt-beh-table thead { display: none !important; }
+      .rpt-beh-table tbody { display: flex !important; flex-direction: column !important; gap: 8px; }
+      .rpt-beh-table tr {
+        display: block !important;
+        padding: 12px 14px !important;
+        border-radius: 10px !important;
+        border: 1px solid var(--blue-gr) !important;
+        background: #fff !important;
+        margin-bottom: 0 !important;
+      }
+      .rpt-beh-table tr:hover td { background: transparent !important; }
+      .rpt-beh-table td {
+        display: block !important;
+        border: none !important;
+        padding: 2px 0 !important;
+        font-size: 12px !important;
+        line-height: 1.55 !important;
+      }
+      .rpt-beh-table td:first-child {
+        font-size: 13px !important;
+        font-weight: 700 !important;
+        color: var(--navy) !important;
+        padding-bottom: 5px !important;
+        margin-bottom: 3px !important;
+        border-bottom: 1px solid var(--blue-gr) !important;
+      }
+      .rpt-beh-table td:last-child { margin-top: 4px !important; }
+    }
+
+    /* Tester form: genre checkboxes 3-col → 2-col */
+    @media(max-width:640px) {
+      .tester-genre-checkboxes { grid-template-columns: repeat(2,1fr) !important; }
     }
 
   </style>
@@ -1260,7 +1315,7 @@
     <div class="container" style="position:relative;z-index:1;">
       <div class="two-col two-col-center">
 
-        <div class="two-col-left-center">
+        <div>
           <span class="eyebrow">The solution</span>
           <h2 class="h2" style="margin-bottom:16px;">Playtest Pilot shows you what players actually experience.</h2>
           <p class="body-lg" style="margin-bottom:32px;">
@@ -1713,7 +1768,7 @@
           <p class="body-lg" style="margin-bottom:28px;">
             Playtest Pilot matches your build with players who actively play your genre, so the feedback is closer to the audience you are trying to reach.
           </p>
-          <div style="display:inline-flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--blue-gr);border-radius:10px;padding:12px 16px;box-shadow:var(--sh-card);">
+          <div class="genre-dot-text" style="display:inline-flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--blue-gr);border-radius:10px;padding:12px 16px;box-shadow:var(--sh-card);">
             <div style="width:8px;height:8px;border-radius:50%;background:var(--blue);flex-shrink:0;"></div>
             <p style="font-size:14px;font-weight:600;color:var(--navy);font-family:'Plus Jakarta Sans',sans-serif;margin:0;">We match based on gameplay habits, not just genre labels.</p>
           </div>
@@ -4810,7 +4865,7 @@
             <!-- Genres -->
             <div>
               <label style="display:block;font-size:13px;font-weight:600;color:var(--navy);margin-bottom:10px;font-family:'Inter',sans-serif;">Favourite genres <span style="color:#EF4444;">*</span></label>
-              <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;">
+              <div class="tester-genre-checkboxes" style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;">
                 <label style="display:flex;align-items:center;gap:8px;padding:10px 12px;border-radius:10px;border:1.5px solid var(--blue-gr);cursor:pointer;font-size:13px;color:var(--navy);font-family:'Inter',sans-serif;transition:border-color .15s,background .15s;" onmouseover="this.style.borderColor='var(--blue)'" onmouseout="this.style.borderColor='var(--blue-gr)'"><input type="checkbox" value="Shooter" style="accent-color:var(--blue);"> Shooter</label>
                 <label style="display:flex;align-items:center;gap:8px;padding:10px 12px;border-radius:10px;border:1.5px solid var(--blue-gr);cursor:pointer;font-size:13px;color:var(--navy);font-family:'Inter',sans-serif;transition:border-color .15s,background .15s;" onmouseover="this.style.borderColor='var(--blue)'" onmouseout="this.style.borderColor='var(--blue-gr)'"><input type="checkbox" value="Horror" style="accent-color:var(--blue);"> Horror</label>
                 <label style="display:flex;align-items:center;gap:8px;padding:10px 12px;border-radius:10px;border:1.5px solid var(--blue-gr);cursor:pointer;font-size:13px;color:var(--navy);font-family:'Inter',sans-serif;transition:border-color .15s,background .15s;" onmouseover="this.style.borderColor='var(--blue)'" onmouseout="this.style.borderColor='var(--blue-gr)'"><input type="checkbox" value="RPG" style="accent-color:var(--blue);"> RPG</label>
