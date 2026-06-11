@@ -1882,7 +1882,7 @@
           <p class="body-lg" style="margin-bottom:24px;">
             A few things developers usually ask before booking.
           </p>
-          <button class="btn btn-secondary" onclick="showPage('service')">See full FAQ on Service page →</button>
+          <button class="btn btn-secondary" onclick="showPage('service');requestAnimationFrame(function(){document.getElementById('service-faq').scrollIntoView({behavior:'smooth',block:'start'});})">See full FAQ on Service page →</button>
         </div>
 
         <div>
@@ -2898,7 +2898,7 @@
   </section>
 
   <!-- ── Full FAQ ── -->
-  <section class="section-py" style="background:#fff;position:relative;overflow:hidden;">
+  <section id="service-faq" class="section-py" style="background:#fff;position:relative;overflow:hidden;">
     <div class="hero-dot-grid"></div>
     <div class="container" style="position:relative;">
       <div style="text-align:center;max-width:560px;margin:0 auto 52px;">
@@ -5211,7 +5211,7 @@
 ════════════════════════════════════════════ -->
 <script>
   // ── Page routing ──
-  function showPage(id) {
+  function showPage(id, pushState = true) {
     document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
     document.getElementById('page-' + id).classList.add('active');
 
@@ -5220,7 +5220,28 @@
     });
 
     window.scrollTo({ top: 0, behavior: 'instant' });
+
+    if (pushState) {
+      const path = id === 'home' ? '/' : '/' + id;
+      history.pushState({ page: id }, '', path);
+    }
   }
+
+  // ── Browser back/forward support ──
+  window.addEventListener('popstate', function(e) {
+    const page = (e.state && e.state.page) ? e.state.page : 'home';
+    showPage(page, false);
+  });
+
+  // ── Initial URL-based routing ──
+  (function() {
+    const path = window.location.pathname;
+    const pageMap = { '/': 'home', '/home': 'home', '/service': 'service', '/report': 'report', '/tester': 'tester', '/book': 'book' };
+    const page = pageMap[path] || 'home';
+    const canonicalPath = page === 'home' ? '/' : '/' + page;
+    history.replaceState({ page: page }, '', canonicalPath);
+    if (page !== 'home') showPage(page, false);
+  })();
 
   // ── Process accordion ──
   function switchProcessStep(n) {
