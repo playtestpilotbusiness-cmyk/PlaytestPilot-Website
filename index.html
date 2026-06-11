@@ -1008,6 +1008,40 @@
       .rpt-funnel-arrow { display: none; }
     }
 
+    /* ── MOBILE ROUND 3 ── */
+
+    /* Prevent horizontal swipe on all pages */
+    @media(max-width:900px) {
+      body { overflow-x: hidden; }
+    }
+
+    /* Behaviour: session timeline scrollable with minimum width */
+    @media(max-width:640px) {
+      .rpt-beh-timeline { overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+      .rpt-beh-timeline::-webkit-scrollbar { display: none; }
+      .rpt-beh-timeline-bar, .rpt-beh-timeline-timestamps { min-width: 480px; }
+    }
+
+    /* Survey S4: Player Voices 2-col → 1-col */
+    @media(max-width:640px) {
+      #rpt-s4 [style*="grid-template-columns:1fr 1fr"] { grid-template-columns: 1fr !important; }
+    }
+
+    /* Report S7: tester profiles 2-col → 1-col */
+    @media(max-width:640px) {
+      .rpt-profiles-grid { grid-template-columns: 1fr !important; }
+    }
+
+    /* Tester page: genre cards 3-col → 2-col */
+    @media(max-width:640px) {
+      .tester-genre-grid { grid-template-columns: repeat(2,1fr) !important; }
+    }
+
+    /* Tester page: tester pool 3-col → 1-col */
+    @media(max-width:640px) {
+      .tester-pool-grid { grid-template-columns: 1fr !important; }
+    }
+
   </style>
 </head>
 <body>
@@ -1226,7 +1260,7 @@
     <div class="container" style="position:relative;z-index:1;">
       <div class="two-col two-col-center">
 
-        <div>
+        <div class="two-col-left-center">
           <span class="eyebrow">The solution</span>
           <h2 class="h2" style="margin-bottom:16px;">Playtest Pilot shows you what players actually experience.</h2>
           <p class="body-lg" style="margin-bottom:32px;">
@@ -1475,7 +1509,7 @@
     <div class="container">
       <div class="two-col">
 
-        <div>
+        <div class="two-col-left-center">
           <span class="eyebrow">The package</span>
           <h2 class="h2" style="margin-bottom:16px;">Player Insight Playtest</h2>
           <p class="body-lg" style="margin-bottom:24px;">
@@ -1670,7 +1704,7 @@
     <div class="container">
       <div class="two-col two-col-center">
 
-        <div>
+        <div class="two-col-left-center">
           <span class="eyebrow">Genre matching</span>
           <h2 class="h2" style="margin-bottom:16px;">Feedback is only useful when it comes from the right players.</h2>
           <p class="body-lg" style="margin-bottom:16px;">
@@ -1733,7 +1767,7 @@
       <div class="ai-card">
         <div class="two-col two-col-center ai-card-inner">
 
-          <div>
+          <div class="two-col-left-center">
             <span class="eyebrow" style="color:rgba(255,255,255,.6);">Transparency</span>
             <h2 class="h2" style="color:#fff;margin-bottom:16px;">AI helps us process evidence faster. Humans make the final call.</h2>
             <p style="font-size:16px;line-height:1.7;color:rgba(255,255,255,.65);">
@@ -1771,7 +1805,7 @@
     <div class="container">
       <div class="two-col">
 
-        <div>
+        <div class="two-col-left-center">
           <span class="eyebrow">FAQ</span>
           <h2 class="h2" style="margin-bottom:16px;">Common questions</h2>
           <p class="body-lg" style="margin-bottom:24px;">
@@ -3246,9 +3280,9 @@
               <h2 class="rpt-section-h">Where players spent their time and where friction emerged</h2>
 
               <!-- Session timeline -->
-              <div style="margin-bottom:24px;">
+              <div class="rpt-beh-timeline" style="margin-bottom:24px;">
                 <p style="font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;font-family:'Inter',sans-serif;">45-minute session timeline</p>
-                <div style="display:flex;border-radius:8px;overflow:hidden;height:30px;margin-bottom:6px;">
+                <div class="rpt-beh-timeline-bar" style="display:flex;border-radius:8px;overflow:hidden;height:30px;margin-bottom:6px;">
                   <div style="width:14%;background:#DBEAFE;display:flex;align-items:center;padding:0 8px;border-right:2px solid #fff;">
                     <span style="font-size:10px;font-weight:700;color:#1D4ED8;font-family:'Inter',sans-serif;white-space:nowrap;">Tutorial</span>
                   </div>
@@ -3268,7 +3302,7 @@
                     <span style="font-size:9px;font-weight:700;color:#B91C1C;font-family:'Inter',sans-serif;white-space:nowrap;">Boss Zone</span>
                   </div>
                 </div>
-                <div style="display:flex;justify-content:space-between;margin-bottom:16px;padding:0 2px;">
+                <div class="rpt-beh-timeline-timestamps" style="display:flex;justify-content:space-between;margin-bottom:16px;padding:0 2px;">
                   <span style="font-size:10px;color:var(--muted);font-family:'Inter',sans-serif;">0:00</span>
                   <span style="font-size:10px;color:var(--muted);font-family:'Inter',sans-serif;">6:30</span>
                   <span style="font-size:10px;color:var(--muted);font-family:'Inter',sans-serif;">10:22</span>
@@ -3903,7 +3937,7 @@
               <h2 class="rpt-section-h">10 genre-matched testers</h2>
               <p style="font-size:13px;color:var(--muted);margin-bottom:20px;font-family:'Inter',sans-serif;">Each tester was individually screened for genre experience, recording capability, verbal commentary quality, and session reliability. All 10 sessions in this report are valid and complete.</p>
 
-              <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px;">
+              <div class="rpt-profiles-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px;">
 
                 <!-- T01 -->
                 <div style="border-radius:12px;border:1px solid var(--blue-gr);padding:16px;background:#fff;">
@@ -4354,7 +4388,7 @@
         <h2 class="h2" style="margin-bottom:16px;">We match testers to games that fit what they actually play.</h2>
         <p class="body-md">No random assignments. Tell us what you play and we'll match you with games in the genres you love.</p>
       </div>
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;">
+      <div class="tester-genre-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;">
         <div class="card hover-lift" style="overflow:hidden;">
           <div style="height:140px;background:url('brand_assets/Roguelite.png') center/cover no-repeat;position:relative;">
             <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(30,36,48,.85) 0%,rgba(30,36,48,.2) 100%);"></div>
@@ -4499,7 +4533,7 @@
         <h2 class="h2" style="margin-bottom:16px;">Who we're looking for.</h2>
         <p class="body-md">Testers come from every background and skill level. The one thing they share: they play honestly and say what they actually think.</p>
       </div>
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
+      <div class="tester-pool-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
         <!-- Profile 1 -->
         <div class="card hover-lift" style="padding:28px;">
           <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px;">
