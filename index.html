@@ -130,6 +130,19 @@
     .hover-lift { transition: transform .2s, box-shadow .2s; }
     .hover-lift:hover { transform: translateY(-4px); box-shadow: var(--sh-lift); }
 
+    /* ── Scroll reveal ── */
+    [data-reveal] {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+    }
+    [data-reveal].revealed { opacity: 1; transform: none; }
+    [data-reveal][data-delay="100"].revealed { transition-delay: .1s; }
+    [data-reveal][data-delay="200"].revealed { transition-delay: .2s; }
+    [data-reveal][data-delay="300"].revealed { transition-delay: .3s; }
+    [data-reveal][data-delay="400"].revealed { transition-delay: .4s; }
+    [data-reveal][data-delay="500"].revealed { transition-delay: .5s; }
+
     /* ── Badges ── */
     .badge {
       display: inline-flex; align-items: center; gap: 4px;
@@ -985,6 +998,17 @@
       .community-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
     }
 
+    /* Founder note: stack vertically on mobile */
+    .founder-note-card { display: flex; align-items: stretch; border-radius: 18px; overflow: hidden; box-shadow: 0 2px 20px rgba(30,36,48,.09), 0 8px 40px rgba(47,123,255,.07); }
+    .founder-note-stat { flex-shrink: 0; background: var(--navy); padding: 32px 36px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; min-width: 148px; position: relative; overflow: hidden; }
+    .founder-note-body { flex: 1; background: #fff; padding: 28px 32px; display: flex; flex-direction: column; justify-content: center; gap: 12px; }
+    @media(max-width:640px) {
+      .founder-note-card { flex-direction: column; }
+      .founder-note-stat { padding: 24px 28px; flex-direction: row; gap: 16px; min-width: unset; justify-content: flex-start; }
+      .founder-note-stat p:first-child { font-size: 36px !important; }
+      .founder-note-body { padding: 20px 24px; }
+    }
+
     /* Report: Build Readiness 3-col → 1-col on mobile */
     @media(max-width:600px) {
       .readiness-grid { grid-template-columns: 1fr !important; }
@@ -1815,15 +1839,23 @@
           <div style="margin-top:16px;padding:14px 16px;background:#fff;border-radius:12px;border:1px solid var(--blue-gr);box-shadow:var(--sh-card);">
             <p style="font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;font-family:'Inter',sans-serif;">Genres currently in our tester pool</p>
             <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px;">
-              <span class="badge badge-blue">Roguelite</span>
-              <span class="badge badge-blue">Cosy Sim</span>
+              <span class="badge badge-blue">Shooter</span>
               <span class="badge badge-blue">Horror</span>
-              <span class="badge badge-blue">Strategy</span>
               <span class="badge badge-blue">RPG</span>
+              <span class="badge badge-blue">Strategy</span>
+              <span class="badge badge-blue">Action</span>
               <span class="badge badge-blue">Survival</span>
+              <span class="badge badge-blue">Roguelite</span>
+              <span class="badge badge-blue">Adventure</span>
               <span class="badge badge-blue">Platformer</span>
               <span class="badge badge-blue">Puzzle</span>
-              <span class="badge badge-blue">Action</span>
+              <span class="badge badge-blue">Open World</span>
+              <span class="badge badge-blue">Simulation</span>
+              <span class="badge badge-blue">Co-op</span>
+              <span class="badge badge-blue">Sandbox</span>
+              <span class="badge badge-blue">Fighting</span>
+              <span class="badge badge-blue">Racing</span>
+              <span class="badge badge-blue">Sports</span>
             </div>
             <p style="font-size:12px;color:var(--muted);line-height:1.5;">Genres outside current coverage may require a custom arrangement. We will always let you know before confirming a booking.</p>
           </div>
@@ -2049,19 +2081,30 @@
   </div>
 
   <!-- ── Founder credibility note ── -->
-  <div style="background:var(--blue-lt);border-top:1px solid #C3D9FF;border-bottom:1px solid #C3D9FF;padding:18px 0;">
+  <section style="background:#fff;padding:40px 0;">
     <div class="container">
-      <div style="max-width:780px;margin:0 auto;display:flex;align-items:flex-start;gap:14px;">
-        <div style="width:36px;height:36px;border-radius:10px;background:#fff;border:1px solid #C3D9FF;display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 1px 3px rgba(47,123,255,.08);">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      <div data-reveal class="founder-note-card" style="max-width:860px;margin:0 auto;">
+        <!-- Stat -->
+        <div class="founder-note-stat">
+          <div style="position:absolute;top:-50px;left:-50px;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,rgba(47,123,255,.35) 0%,transparent 70%);pointer-events:none;"></div>
+          <p style="font-size:54px;font-weight:800;color:#fff;line-height:1;font-family:'Plus Jakarta Sans',sans-serif;position:relative;">8</p>
+          <p style="font-size:10px;font-weight:700;color:rgba(255,255,255,.5);font-family:'Inter',sans-serif;text-transform:uppercase;letter-spacing:.08em;text-align:center;line-height:1.5;position:relative;">Years in the<br>games industry</p>
         </div>
-        <div>
-          <p style="font-size:13px;font-weight:700;color:var(--navy);margin-bottom:3px;font-family:'Plus Jakarta Sans',sans-serif;">Founder-led beta playtests now available</p>
-          <p style="font-size:13px;color:var(--muted);line-height:1.55;font-family:'Inter',sans-serif;">Playtest Pilot is a new service run directly by its founder. Every project in this phase is personally reviewed and managed from intake to delivery. Your build is not processed by an automated pipeline. Reports are human-reviewed before they reach you.</p>
+        <!-- Description -->
+        <div class="founder-note-body">
+          <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+            <p style="font-size:16px;font-weight:700;color:var(--navy);font-family:'Plus Jakarta Sans',sans-serif;">Founder-led beta playtests, now available</p>
+            <span style="font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:3px 8px;border-radius:6px;background:var(--blue);color:#fff;font-family:'Inter',sans-serif;">BETA</span>
+          </div>
+          <p style="font-size:14px;color:var(--muted);line-height:1.65;font-family:'Inter',sans-serif;">Playtest Pilot is run directly by its founder, who has 8 years of experience in the games industry, including time at Rockstar Games and Ubisoft. Every project in this phase is personally reviewed and managed from intake to delivery. Reports are human-reviewed before they reach you.</p>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;">
+            <span style="font-size:12px;font-weight:600;color:var(--navy);padding:4px 12px;border:1.5px solid var(--blue-gr);border-radius:8px;font-family:'Inter',sans-serif;">Rockstar Games</span>
+            <span style="font-size:12px;font-weight:600;color:var(--navy);padding:4px 12px;border:1.5px solid var(--blue-gr);border-radius:8px;font-family:'Inter',sans-serif;">Ubisoft</span>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
   <!-- ── Who this is for ── -->
   <section class="section-py" style="background:#fff;position:relative;overflow:hidden;">
@@ -4385,14 +4428,14 @@
   <!-- ── What testers do ── -->
   <section id="tester-how" class="section-py" style="background:var(--blue-lt);">
     <div class="container">
-      <div style="text-align:center;max-width:520px;margin:0 auto 52px;">
+      <div data-reveal style="max-width:580px;margin:0 0 52px;">
         <span class="eyebrow">What testers do</span>
         <h2 class="h2" style="margin-bottom:16px;">Four things. Every time.</h2>
         <p class="body-md">No lengthy commitments. No complex setup. Each session is straightforward and paid on completion.</p>
       </div>
       <div class="grid-4col">
         <!-- Play -->
-        <div class="card hover-lift" style="padding:28px 24px;text-align:center;">
+        <div data-reveal class="card hover-lift" style="padding:28px 24px;text-align:center;">
           <div style="width:52px;height:52px;border-radius:14px;background:rgba(47,123,255,.1);border:1px solid #C3D9FF;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
           </div>
@@ -4400,7 +4443,7 @@
           <p class="body-sm">Play an unreleased PC game for 45 minutes.</p>
         </div>
         <!-- Record -->
-        <div class="card hover-lift" style="padding:28px 24px;text-align:center;">
+        <div data-reveal data-delay="100" class="card hover-lift" style="padding:28px 24px;text-align:center;">
           <div style="width:52px;height:52px;border-radius:14px;background:rgba(47,123,255,.1);border:1px solid #C3D9FF;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="15" height="15" rx="2"/><polygon points="17 8 23 6 23 18 17 16"/></svg>
           </div>
@@ -4408,7 +4451,7 @@
           <p class="body-sm">Record your screen and audio as you play.</p>
         </div>
         <!-- Survey -->
-        <div class="card hover-lift" style="padding:28px 24px;text-align:center;">
+        <div data-reveal data-delay="200" class="card hover-lift" style="padding:28px 24px;text-align:center;">
           <div style="width:52px;height:52px;border-radius:14px;background:rgba(47,123,255,.1);border:1px solid #C3D9FF;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
           </div>
@@ -4416,7 +4459,7 @@
           <p class="body-sm">Answer a post-session survey honestly.</p>
         </div>
         <!-- Get paid -->
-        <div class="card hover-lift" style="padding:28px 24px;text-align:center;">
+        <div data-reveal data-delay="300" class="card hover-lift" style="padding:28px 24px;text-align:center;">
           <div style="width:52px;height:52px;border-radius:14px;background:rgba(34,197,94,.1);border:1px solid #BBF7D0;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
           </div>
@@ -4431,12 +4474,12 @@
   <section class="section-py" style="background:#fff;position:relative;overflow:hidden;">
     <div class="hero-dot-grid"></div>
     <div class="container" style="position:relative;">
-      <div style="text-align:center;max-width:560px;margin:0 auto 52px;">
+      <div data-reveal style="max-width:560px;margin:0 0 52px;">
         <span class="eyebrow">Who should apply</span>
         <h2 class="h2" style="margin-bottom:16px;">We're looking for honest players, not perfect ones.</h2>
       </div>
       <div class="two-col" style="gap:32px;align-items:stretch;">
-        <div class="card hover-lift" style="padding:36px;height:100%;box-sizing:border-box;">
+        <div data-reveal class="card hover-lift" style="padding:36px;height:100%;box-sizing:border-box;">
           <div style="display:flex;align-items:center;gap:10px;margin-bottom:28px;">
             <div style="width:36px;height:36px;border-radius:10px;background:#F0FDF4;border:1px solid #BBF7D0;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
@@ -4459,7 +4502,7 @@
             </div>
             <p style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:16px;color:var(--navy);">Not the right fit if you…</p>
           </div>
-          <div style="display:flex;flex-direction:column;gap:14px;">
+          <div style="display:flex;flex-direction:column;gap:14px;" data-reveal data-delay="100">
             <div style="display:flex;gap:10px;align-items:flex-start;"><div style="width:6px;height:6px;border-radius:50%;background:var(--amber);flex-shrink:0;margin-top:7px;"></div><p class="body-sm">Are primarily looking for free early access to games</p></div>
             <div style="display:flex;gap:10px;align-items:flex-start;"><div style="width:6px;height:6px;border-radius:50%;background:var(--amber);flex-shrink:0;margin-top:7px;"></div><p class="body-sm">Cannot record your screen and audio clearly</p></div>
             <div style="display:flex;gap:10px;align-items:flex-start;"><div style="width:6px;height:6px;border-radius:50%;background:var(--amber);flex-shrink:0;margin-top:7px;"></div><p class="body-sm">Play exclusively on console or mobile</p></div>
@@ -4472,37 +4515,37 @@
   </section>
 
   <!-- ── How we vet testers ── -->
-  <section class="section-py" style="background:#fff;">
+  <section class="section-py" style="background:var(--blue-lt);">
     <div class="container">
-      <div style="text-align:center;max-width:560px;margin:0 auto 52px;">
+      <div data-reveal style="max-width:580px;margin:0 0 52px;">
         <span class="eyebrow">Tester vetting</span>
         <h2 class="h2" style="margin-bottom:16px;">Every tester goes through a 3-step review.</h2>
         <p class="body-lg">We do not accept testers based on form answers alone. Every applicant goes through a structured review before being added to the active pool.</p>
       </div>
       <div class="grid-3col" style="max-width:900px;margin:0 auto 44px;">
-        <div class="card" style="padding:28px 24px;">
-          <div style="width:40px;height:40px;border-radius:12px;background:var(--blue-lt);border:1px solid #C3D9FF;display:flex;align-items:center;justify-content:center;margin-bottom:16px;">
+        <div data-reveal class="card" style="padding:28px 24px;">
+          <div style="width:40px;height:40px;border-radius:12px;background:#fff;border:1px solid #C3D9FF;display:flex;align-items:center;justify-content:center;margin-bottom:16px;">
             <span style="font-size:15px;font-weight:800;color:var(--blue);font-family:'Plus Jakarta Sans',sans-serif;">1</span>
           </div>
           <p style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:15px;color:var(--navy);margin-bottom:8px;">Application review</p>
           <p class="body-sm">We read every application by hand. Answers are reviewed for genuine player perspective, not just genre knowledge. Rushed or generic responses do not advance.</p>
         </div>
-        <div class="card" style="padding:28px 24px;">
-          <div style="width:40px;height:40px;border-radius:12px;background:var(--blue-lt);border:1px solid #C3D9FF;display:flex;align-items:center;justify-content:center;margin-bottom:16px;">
+        <div data-reveal data-delay="100" class="card" style="padding:28px 24px;">
+          <div style="width:40px;height:40px;border-radius:12px;background:#fff;border:1px solid #C3D9FF;display:flex;align-items:center;justify-content:center;margin-bottom:16px;">
             <span style="font-size:15px;font-weight:800;color:var(--blue);font-family:'Plus Jakarta Sans',sans-serif;">2</span>
           </div>
           <p style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:15px;color:var(--navy);margin-bottom:8px;">Short recording test</p>
           <p class="body-sm">Shortlisted applicants complete a brief recording exercise. We review both the recording quality and how clearly they articulate what they experienced during play.</p>
         </div>
-        <div class="card" style="padding:28px 24px;">
-          <div style="width:40px;height:40px;border-radius:12px;background:var(--blue-lt);border:1px solid #C3D9FF;display:flex;align-items:center;justify-content:center;margin-bottom:16px;">
+        <div data-reveal data-delay="200" class="card" style="padding:28px 24px;">
+          <div style="width:40px;height:40px;border-radius:12px;background:#fff;border:1px solid #C3D9FF;display:flex;align-items:center;justify-content:center;margin-bottom:16px;">
             <span style="font-size:15px;font-weight:800;color:var(--blue);font-family:'Plus Jakarta Sans',sans-serif;">3</span>
           </div>
           <p style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:15px;color:var(--navy);margin-bottom:8px;">Mock survey</p>
           <p class="body-sm">Applicants complete a short practice survey, the same format used in live sessions. We score responses for specificity, accuracy, and the quality of reasoning given.</p>
         </div>
       </div>
-      <div style="max-width:700px;margin:0 auto;padding:24px 28px;background:var(--blue-lt);border-radius:16px;border:1px solid #C3D9FF;">
+      <div data-reveal style="max-width:700px;margin:0 auto;padding:24px 28px;background:#fff;border-radius:16px;border:1px solid #C3D9FF;box-shadow:var(--sh-card);">
         <p style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--blue);margin-bottom:14px;font-family:'Inter',sans-serif;">What we score</p>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
           <div style="display:flex;align-items:flex-start;gap:8px;">
@@ -4532,17 +4575,18 @@
   </section>
 
   <!-- ── What you need ── -->
-  <section class="section-py" style="background:var(--blue-lt);">
-    <div class="container">
+  <section class="section-py" style="background:#fff;position:relative;overflow:hidden;">
+    <div class="hero-dot-grid"></div>
+    <div class="container" style="position:relative;">
       <div class="two-col two-col-center" style="gap:64px;">
-        <div class="two-col-left-center">
+        <div class="two-col-left-center" data-reveal>
           <span class="eyebrow">Requirements</span>
           <h2 class="h2" style="margin-bottom:20px;">What you need to get started.</h2>
           <p class="body-lg" style="margin-bottom:36px;">The technical bar is intentionally low. If you play PC games regularly and can record your screen, you likely have everything you need.</p>
           <a href="#tester-form" class="btn btn-primary" onclick="document.getElementById('tester-form').scrollIntoView({behavior:'smooth'});return false;">Apply Now</a>
         </div>
-        <div style="display:flex;flex-direction:column;gap:16px;">
-          <div class="card" style="padding:20px 24px;display:flex;align-items:center;gap:16px;">
+        <div data-reveal data-delay="100" style="display:flex;flex-direction:column;gap:16px;">
+          <div class="card hover-lift" style="padding:20px 24px;display:flex;align-items:center;gap:16px;">
             <div style="width:40px;height:40px;border-radius:10px;background:#F0FDF4;border:1px solid #BBF7D0;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
             </div>
@@ -4584,9 +4628,9 @@
   </section>
 
   <!-- ── Genres we test ── -->
-  <section class="section-py" style="background:#fff;">
+  <section class="section-py" style="background:var(--blue-lt);">
     <div class="container">
-      <div style="text-align:center;max-width:540px;margin:0 auto 52px;">
+      <div data-reveal style="max-width:580px;margin:0 0 52px;">
         <span class="eyebrow">Genre matching</span>
         <h2 class="h2" style="margin-bottom:16px;">We match testers to games that fit what they actually play.</h2>
         <p class="body-md">No random assignments. Tell us what you play and we'll match you with games in the genres you love.</p>
@@ -4713,8 +4757,8 @@
             <p class="body-sm">Handling feel, track readability, difficulty curve, and competitive balance.</p>
           </div>
         </div>
-        <div class="card hover-lift" style="overflow:hidden;background:var(--blue-lt);">
-          <div style="height:140px;background:linear-gradient(135deg,var(--blue-lt) 0%,rgba(47,123,255,.15) 100%);display:flex;align-items:center;justify-content:center;position:relative;">
+        <div class="card hover-lift" style="overflow:hidden;">
+          <div style="height:140px;background:linear-gradient(135deg,rgba(47,123,255,.06) 0%,rgba(47,123,255,.14) 100%);display:flex;align-items:center;justify-content:center;position:relative;border-bottom:1px solid #C3D9FF;">
             <div style="text-align:center;">
               <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="1.5" style="display:block;margin:0 auto 8px;"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
               <p style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:13px;color:var(--blue);">Your genre</p>
@@ -4729,16 +4773,17 @@
   </section>
 
   <!-- ── Tester profiles ── -->
-  <section class="section-py" style="background:var(--blue-lt);">
-    <div class="container">
-      <div style="text-align:center;max-width:540px;margin:0 auto 52px;">
+  <section class="section-py" style="background:#fff;position:relative;overflow:hidden;">
+    <div class="hero-dot-grid"></div>
+    <div class="container" style="position:relative;">
+      <div data-reveal style="max-width:580px;margin:0 0 52px;">
         <span class="eyebrow">Our tester pool</span>
         <h2 class="h2" style="margin-bottom:16px;">Who we're looking for.</h2>
         <p class="body-md">Testers come from every background and skill level. The one thing they share: they play honestly and say what they actually think.</p>
       </div>
       <div class="tester-pool-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
         <!-- Profile 1 -->
-        <div class="card hover-lift" style="padding:28px;">
+        <div data-reveal class="card hover-lift" style="padding:28px;">
           <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px;">
             <div style="width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,#2F7BFF 0%,#1A68F0 100%);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
               <span style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:16px;color:#fff;">T</span>
@@ -4770,7 +4815,7 @@
           </div>
         </div>
         <!-- Profile 2 -->
-        <div class="card hover-lift" style="padding:28px;">
+        <div data-reveal data-delay="100" class="card hover-lift" style="padding:28px;">
           <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px;">
             <div style="width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,#7C3AED 0%,#6D28D9 100%);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
               <span style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:16px;color:#fff;">S</span>
@@ -4802,7 +4847,7 @@
           </div>
         </div>
         <!-- Profile 3 -->
-        <div class="card hover-lift" style="padding:28px;">
+        <div data-reveal data-delay="200" class="card hover-lift" style="padding:28px;">
           <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px;">
             <div style="width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,#0F766E 0%,#0D6362 100%);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
               <span style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:16px;color:#fff;">J</span>
@@ -4842,12 +4887,12 @@
     <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(47,123,255,.12) 0%,transparent 70%);pointer-events:none;"></div>
     <div class="container" style="position:relative;">
       <div class="two-col two-col-center" style="gap:64px;">
-        <div>
+        <div data-reveal>
           <span class="eyebrow" style="color:rgba(255,255,255,.5);">Confidentiality</span>
           <h2 class="h2" style="color:#fff;margin-bottom:20px;">The NDA is part of the deal.</h2>
           <p style="font-size:17px;line-height:1.7;color:rgba(255,255,255,.65);margin-bottom:0;">Developers trust Playtest Pilot with unreleased games. Testers must sign an NDA before receiving build access. Content must not be shared, streamed, posted, or discussed outside the session. This is non-negotiable and applies to every project.</p>
         </div>
-        <div style="display:flex;flex-direction:column;gap:16px;">
+        <div data-reveal data-delay="100" style="display:flex;flex-direction:column;gap:16px;">
           <div style="padding:20px 24px;background:rgba(255,255,255,.06);border-radius:14px;border:1px solid rgba(255,255,255,.1);display:flex;align-items:flex-start;gap:14px;">
             <div style="width:36px;height:36px;border-radius:10px;background:rgba(47,123,255,.2);border:1px solid rgba(47,123,255,.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
@@ -4875,7 +4920,7 @@
   <section class="section-py" style="background:#fff;">
     <div class="container">
       <div class="community-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;">
-        <div>
+        <div data-reveal>
           <span class="eyebrow">The Community</span>
           <h2 class="h2" style="margin-bottom:20px;">A private space for accepted testers.</h2>
           <p style="font-size:17px;line-height:1.7;color:var(--muted);margin-bottom:28px;">Being a Playtest Pilot tester means joining an invite-only Discord community. It's where upcoming playtests are announced, build links are shared, and testers connect between sessions.</p>
@@ -4927,9 +4972,9 @@
   </section>
 
   <!-- ── Tester FAQ ── -->
-  <section class="section-py" style="background:#F8FAFC;">
+  <section class="section-py" style="background:var(--blue-lt);">
     <div class="container" style="max-width:760px;">
-      <div style="text-align:center;margin-bottom:48px;">
+      <div data-reveal style="margin-bottom:48px;">
         <span class="eyebrow">Common questions</span>
         <h2 class="h2" style="margin-bottom:16px;">Questions before you apply.</h2>
         <p class="body-lg">Everything you need to know about how testing works.</p>
@@ -4985,7 +5030,7 @@
     <div class="hero-dot-grid"></div>
     <div class="container" style="position:relative;">
       <div style="max-width:680px;margin:0 auto;">
-        <div style="text-align:center;margin-bottom:48px;">
+        <div data-reveal style="margin-bottom:48px;">
           <span class="eyebrow">Apply to join</span>
           <h2 class="h2" style="margin-bottom:16px;">Apply to become a tester.</h2>
           <p class="body-lg">We review every application by hand. If you're a good fit for Playtest Pilot, we'll be in touch.</p>
@@ -5180,27 +5225,27 @@
   <!-- What happens next -->
   <section class="section-py-sm" style="background:var(--blue-lt);">
     <div class="container">
-      <div style="text-align:center;max-width:480px;margin:0 auto 40px;">
+      <div data-reveal style="max-width:480px;margin:0 0 40px;">
         <span class="eyebrow">What happens next</span>
         <h2 class="h2" style="font-size:clamp(22px,3vw,28px);margin-bottom:0;">Three steps from submission to report.</h2>
       </div>
       <div class="grid-3col" style="max-width:860px;margin:0 auto;">
-        <div class="card" style="padding:28px 24px;text-align:center;position:relative;">
-          <div style="width:36px;height:36px;border-radius:10px;background:var(--blue);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;">
+        <div data-reveal class="card hover-lift" style="padding:28px 24px;position:relative;">
+          <div style="width:40px;height:40px;border-radius:12px;background:var(--blue);display:flex;align-items:center;justify-content:center;margin-bottom:20px;">
             <span style="font-size:14px;font-weight:800;color:#fff;font-family:'Plus Jakarta Sans',sans-serif;">1</span>
           </div>
           <p style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:15px;color:var(--navy);margin-bottom:8px;">Submit the form below</p>
           <p class="body-sm">Tell us about your game and what you want to learn from the playtest.</p>
         </div>
-        <div class="card" style="padding:28px 24px;text-align:center;position:relative;">
-          <div style="width:36px;height:36px;border-radius:10px;background:var(--blue);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;">
+        <div data-reveal data-delay="100" class="card hover-lift" style="padding:28px 24px;position:relative;">
+          <div style="width:40px;height:40px;border-radius:12px;background:var(--blue);display:flex;align-items:center;justify-content:center;margin-bottom:20px;">
             <span style="font-size:14px;font-weight:800;color:#fff;font-family:'Plus Jakarta Sans',sans-serif;">2</span>
           </div>
           <p style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:15px;color:var(--navy);margin-bottom:8px;">We get back to you within 48 hours</p>
           <p class="body-sm">We will be in touch within 48 hours to confirm session timeline and discuss next steps.</p>
         </div>
-        <div class="card" style="padding:28px 24px;text-align:center;position:relative;">
-          <div style="width:36px;height:36px;border-radius:10px;background:var(--blue);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;">
+        <div data-reveal data-delay="200" class="card hover-lift" style="padding:28px 24px;position:relative;">
+          <div style="width:40px;height:40px;border-radius:12px;background:var(--blue);display:flex;align-items:center;justify-content:center;margin-bottom:20px;">
             <span style="font-size:14px;font-weight:800;color:#fff;font-family:'Plus Jakarta Sans',sans-serif;">3</span>
           </div>
           <p style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:15px;color:var(--navy);margin-bottom:8px;">Playtest run, report delivered</p>
@@ -5215,7 +5260,7 @@
     <div class="hero-dot-grid"></div>
     <div class="container" style="position:relative;">
       <div style="max-width:700px;margin:0 auto;">
-        <div style="text-align:center;margin-bottom:48px;">
+        <div data-reveal style="text-align:center;margin-bottom:48px;">
           <span class="eyebrow">Get started</span>
           <h2 class="h2" style="margin-bottom:16px;">Tell us about your game.</h2>
           <p class="body-lg">Every field helps us match the right players and structure the right playtest for your build.</p>
@@ -5370,6 +5415,7 @@
     });
 
     window.scrollTo({ top: 0, behavior: 'instant' });
+    setTimeout(initReveal, 50);
 
     if (pushState) {
       const path = id === 'home' ? '/' : '/' + id;
@@ -5537,6 +5583,19 @@
       body.classList.add('open');
     }
   }
+
+  // ── Scroll reveal ──
+  function initReveal() {
+    const els = document.querySelectorAll('[data-reveal]:not(.revealed)');
+    if (!els.length) return;
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('revealed'); obs.unobserve(e.target); }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -32px 0px' });
+    els.forEach(el => obs.observe(el));
+  }
+  initReveal();
 </script>
 
 </body>
