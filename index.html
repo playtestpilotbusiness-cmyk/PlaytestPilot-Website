@@ -130,6 +130,14 @@
     .hover-lift { transition: transform .2s, box-shadow .2s; }
     .hover-lift:hover { transform: translateY(-4px); box-shadow: var(--sh-lift); }
 
+    /* Lighter lift for smaller inline items */
+    .hover-lift-sm { transition: transform .15s, box-shadow .15s, border-color .15s; }
+    .hover-lift-sm:hover { transform: translateY(-2px); box-shadow: var(--sh-lift); border-color: #C3D9FF !important; }
+
+    /* Vetting score pills */
+    .vetting-pill { transition: transform .15s, background .15s, border-color .15s; cursor: default; }
+    .vetting-pill:hover { transform: translateY(-2px); background: #E0ECFF !important; border-color: var(--blue) !important; }
+
     /* ── Scroll reveal ── */
     [data-reveal] {
       opacity: 0;
@@ -327,7 +335,9 @@
       border: 1px solid var(--blue-gr);
       padding: 24px;
       box-shadow: var(--sh-card);
+      transition: transform .2s, box-shadow .2s, border-color .2s;
     }
+    .solution-card:hover { transform: translateY(-3px); box-shadow: var(--sh-lift); border-color: #C3D9FF; }
     .solution-num {
       width: 36px; height: 36px; border-radius: 10px;
       background: var(--blue); color: #fff;
@@ -363,7 +373,9 @@
       border: 2px solid var(--blue-gr);
       box-shadow: var(--sh-lift);
       padding: 36px;
+      transition: transform .25s, box-shadow .25s;
     }
+    .package-card:hover { transform: translateY(-4px); box-shadow: var(--sh-float); }
     .package-price {
       font-family: 'Plus Jakarta Sans', sans-serif;
       font-size: 48px; font-weight: 800; color: var(--navy);
@@ -1722,42 +1734,42 @@
           <p class="body-md" style="margin-bottom:20px;">Best for playable PC builds where you need to understand onboarding, clarity, pacing, difficulty, or early engagement.</p>
 
           <div style="display:flex;flex-direction:column;gap:10px;">
-            <div style="display:flex;align-items:flex-start;gap:14px;padding:16px 18px;background:#fff;border-radius:12px;border:1px solid var(--blue-gr);box-shadow:var(--sh-card);">
+            <div class="hover-lift-sm" style="display:flex;align-items:flex-start;gap:14px;padding:16px 18px;background:#fff;border-radius:12px;border:1px solid var(--blue-gr);box-shadow:var(--sh-card);">
               <span style="font-size:22px;line-height:1;margin-top:2px;flex-shrink:0;">🎮</span>
               <div>
                 <p style="font-size:14px;font-weight:600;color:var(--navy);margin-bottom:3px;">Preparing a public demo</p>
                 <p style="font-size:12px;color:var(--muted);line-height:1.5;">Know what lands before your first public audience sees it.</p>
               </div>
             </div>
-            <div style="display:flex;align-items:flex-start;gap:14px;padding:16px 18px;background:#fff;border-radius:12px;border:1px solid var(--blue-gr);box-shadow:var(--sh-card);">
+            <div class="hover-lift-sm" style="display:flex;align-items:flex-start;gap:14px;padding:16px 18px;background:#fff;border-radius:12px;border:1px solid var(--blue-gr);box-shadow:var(--sh-card);">
               <span style="font-size:22px;line-height:1;margin-top:2px;flex-shrink:0;">⚡</span>
               <div>
                 <p style="font-size:14px;font-weight:600;color:var(--navy);margin-bottom:3px;">Steam Next Fest</p>
                 <p style="font-size:12px;color:var(--muted);line-height:1.5;">Validate your demo before thousands of players go live with it.</p>
               </div>
             </div>
-            <div style="display:flex;align-items:flex-start;gap:14px;padding:16px 18px;background:#fff;border-radius:12px;border:1px solid var(--blue-gr);box-shadow:var(--sh-card);">
+            <div class="hover-lift-sm" style="display:flex;align-items:flex-start;gap:14px;padding:16px 18px;background:#fff;border-radius:12px;border:1px solid var(--blue-gr);box-shadow:var(--sh-card);">
               <span style="font-size:22px;line-height:1;margin-top:2px;flex-shrink:0;">📊</span>
               <div>
                 <p style="font-size:14px;font-weight:600;color:var(--navy);margin-bottom:3px;">Publisher or investor pitch</p>
                 <p style="font-size:12px;color:var(--muted);line-height:1.5;">Evidence that your game resonates with real players, not just your team.</p>
               </div>
             </div>
-            <div style="display:flex;align-items:flex-start;gap:14px;padding:16px 18px;background:#fff;border-radius:12px;border:1px solid var(--blue-gr);box-shadow:var(--sh-card);">
+            <div class="hover-lift-sm" style="display:flex;align-items:flex-start;gap:14px;padding:16px 18px;background:#fff;border-radius:12px;border:1px solid var(--blue-gr);box-shadow:var(--sh-card);">
               <span style="font-size:22px;line-height:1;margin-top:2px;flex-shrink:0;">🚀</span>
               <div>
                 <p style="font-size:14px;font-weight:600;color:var(--navy);margin-bottom:3px;">Kickstarter demo or launch</p>
                 <p style="font-size:12px;color:var(--muted);line-height:1.5;">Build backer confidence with feedback-driven improvements before you go live.</p>
               </div>
             </div>
-            <div style="display:flex;align-items:flex-start;gap:14px;padding:16px 18px;background:#fff;border-radius:12px;border:1px solid var(--blue-gr);box-shadow:var(--sh-card);">
+            <div class="hover-lift-sm" style="display:flex;align-items:flex-start;gap:14px;padding:16px 18px;background:#fff;border-radius:12px;border:1px solid var(--blue-gr);box-shadow:var(--sh-card);">
               <span style="font-size:22px;line-height:1;margin-top:2px;flex-shrink:0;">🔄</span>
               <div>
                 <p style="font-size:14px;font-weight:600;color:var(--navy);margin-bottom:3px;">Early access update</p>
                 <p style="font-size:12px;color:var(--muted);line-height:1.5;">See how your existing audience responds to new content or changes.</p>
               </div>
             </div>
-            <div style="display:flex;align-items:flex-start;gap:14px;padding:16px 18px;background:#fff;border-radius:12px;border:1px solid var(--blue-gr);box-shadow:var(--sh-card);">
+            <div class="hover-lift-sm" style="display:flex;align-items:flex-start;gap:14px;padding:16px 18px;background:#fff;border-radius:12px;border:1px solid var(--blue-gr);box-shadow:var(--sh-card);">
               <span style="font-size:22px;line-height:1;margin-top:2px;flex-shrink:0;">🔍</span>
               <div>
                 <p style="font-size:14px;font-weight:600;color:var(--navy);margin-bottom:3px;">First-time player onboarding review</p>
@@ -4583,23 +4595,23 @@
       <div data-reveal style="padding:24px 28px;background:#fff;border-radius:16px;border:1px solid #C3D9FF;box-shadow:var(--sh-card);">
         <p style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--blue);margin-bottom:14px;font-family:'Inter',sans-serif;">What we score in each step</p>
         <div class="vetting-score-grid" style="display:grid;grid-template-columns:repeat(5,1fr);gap:12px;">
-          <div style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;padding:14px;background:var(--blue-lt);border-radius:10px;border:1px solid #C3D9FF;">
+          <div class="vetting-pill" style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;padding:14px;background:var(--blue-lt);border-radius:10px;border:1px solid #C3D9FF;">
             <div style="width:6px;height:6px;border-radius:50%;background:var(--blue);"></div>
             <span style="font-size:13px;color:var(--navy);font-family:'Inter',sans-serif;font-weight:600;">Observation quality</span>
           </div>
-          <div style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;padding:14px;background:var(--blue-lt);border-radius:10px;border:1px solid #C3D9FF;">
+          <div class="vetting-pill" style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;padding:14px;background:var(--blue-lt);border-radius:10px;border:1px solid #C3D9FF;">
             <div style="width:6px;height:6px;border-radius:50%;background:var(--blue);"></div>
             <span style="font-size:13px;color:var(--navy);font-family:'Inter',sans-serif;font-weight:600;">Articulation clarity</span>
           </div>
-          <div style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;padding:14px;background:var(--blue-lt);border-radius:10px;border:1px solid #C3D9FF;">
+          <div class="vetting-pill" style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;padding:14px;background:var(--blue-lt);border-radius:10px;border:1px solid #C3D9FF;">
             <div style="width:6px;height:6px;border-radius:50%;background:var(--blue);"></div>
             <span style="font-size:13px;color:var(--navy);font-family:'Inter',sans-serif;font-weight:600;">Survey reasoning</span>
           </div>
-          <div style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;padding:14px;background:var(--blue-lt);border-radius:10px;border:1px solid #C3D9FF;">
+          <div class="vetting-pill" style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;padding:14px;background:var(--blue-lt);border-radius:10px;border:1px solid #C3D9FF;">
             <div style="width:6px;height:6px;border-radius:50%;background:var(--blue);"></div>
             <span style="font-size:13px;color:var(--navy);font-family:'Inter',sans-serif;font-weight:600;">Recording setup</span>
           </div>
-          <div style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;padding:14px;background:var(--blue-lt);border-radius:10px;border:1px solid #C3D9FF;">
+          <div class="vetting-pill" style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;padding:14px;background:var(--blue-lt);border-radius:10px;border:1px solid #C3D9FF;">
             <div style="width:6px;height:6px;border-radius:50%;background:var(--blue);"></div>
             <span style="font-size:13px;color:var(--navy);font-family:'Inter',sans-serif;font-weight:600;">Genre fit</span>
           </div>
@@ -4965,7 +4977,7 @@
           </div>
         </div>
         <div data-reveal data-delay="100" style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
-          <div style="padding:24px;border-radius:16px;border:1.5px solid var(--blue-gr);background:#fff;box-shadow:var(--sh-card);display:flex;align-items:flex-start;gap:16px;">
+          <div class="hover-lift-sm" style="padding:24px;border-radius:16px;border:1.5px solid var(--blue-gr);background:#fff;box-shadow:var(--sh-card);display:flex;align-items:flex-start;gap:16px;">
             <div style="width:44px;height:44px;border-radius:12px;background:var(--blue-lt);border:1px solid #C3D9FF;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
             </div>
@@ -4974,7 +4986,7 @@
               <p class="body-sm">Upcoming playtests in your genres are announced in the server before anywhere else.</p>
             </div>
           </div>
-          <div style="padding:24px;border-radius:16px;border:1.5px solid var(--blue-gr);background:#fff;box-shadow:var(--sh-card);display:flex;align-items:flex-start;gap:16px;">
+          <div class="hover-lift-sm" style="padding:24px;border-radius:16px;border:1.5px solid var(--blue-gr);background:#fff;box-shadow:var(--sh-card);display:flex;align-items:flex-start;gap:16px;">
             <div style="width:44px;height:44px;border-radius:12px;background:var(--blue-lt);border:1px solid #C3D9FF;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
             </div>
@@ -4983,7 +4995,7 @@
               <p class="body-sm">When you're confirmed for a session, the build download link is shared in the server.</p>
             </div>
           </div>
-          <div style="padding:24px;border-radius:16px;border:1.5px solid var(--blue-gr);background:#fff;box-shadow:var(--sh-card);display:flex;align-items:flex-start;gap:16px;">
+          <div class="hover-lift-sm" style="padding:24px;border-radius:16px;border:1.5px solid var(--blue-gr);background:#fff;box-shadow:var(--sh-card);display:flex;align-items:flex-start;gap:16px;">
             <div style="width:44px;height:44px;border-radius:12px;background:var(--blue-lt);border:1px solid #C3D9FF;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
             </div>
@@ -4992,7 +5004,7 @@
               <p class="body-sm">Connect and chat with other testers who love gaming as much as you do.</p>
             </div>
           </div>
-          <div style="padding:24px;border-radius:16px;border:1.5px solid var(--blue-gr);background:#fff;box-shadow:var(--sh-card);display:flex;align-items:flex-start;gap:16px;">
+          <div class="hover-lift-sm" style="padding:24px;border-radius:16px;border:1.5px solid var(--blue-gr);background:#fff;box-shadow:var(--sh-card);display:flex;align-items:flex-start;gap:16px;">
             <div style="width:44px;height:44px;border-radius:12px;background:var(--blue-lt);border:1px solid #C3D9FF;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
             </div>
@@ -5266,21 +5278,21 @@
         <p class="body-md">No payment required upfront. We confirm scope and availability before anything is confirmed.</p>
       </div>
       <div class="book-steps-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
-        <div data-reveal class="card" style="padding:32px 28px;text-align:center;position:relative;">
+        <div data-reveal class="card hover-lift" style="padding:32px 28px;text-align:center;">
           <div style="width:56px;height:56px;border-radius:50%;background:var(--blue);display:flex;align-items:center;justify-content:center;margin:0 auto 24px;box-shadow:0 4px 16px rgba(47,123,255,.30);">
             <span style="font-size:18px;font-weight:800;color:#fff;font-family:'Plus Jakarta Sans',sans-serif;">1</span>
           </div>
           <p style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:16px;color:var(--navy);margin-bottom:10px;line-height:1.3;">Submit the form below</p>
           <p class="body-sm">Tell us about your game and what you want to learn from the playtest.</p>
         </div>
-        <div data-reveal data-delay="100" class="card" style="padding:32px 28px;text-align:center;">
+        <div data-reveal data-delay="100" class="card hover-lift" style="padding:32px 28px;text-align:center;">
           <div style="width:56px;height:56px;border-radius:50%;background:var(--blue);display:flex;align-items:center;justify-content:center;margin:0 auto 24px;box-shadow:0 4px 16px rgba(47,123,255,.30);">
             <span style="font-size:18px;font-weight:800;color:#fff;font-family:'Plus Jakarta Sans',sans-serif;">2</span>
           </div>
           <p style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:16px;color:var(--navy);margin-bottom:10px;line-height:1.3;">We reply within 48 hours</p>
           <p class="body-sm">We confirm session timeline and discuss next steps before anything is booked.</p>
         </div>
-        <div data-reveal data-delay="200" class="card" style="padding:32px 28px;text-align:center;">
+        <div data-reveal data-delay="200" class="card hover-lift" style="padding:32px 28px;text-align:center;">
           <div style="width:56px;height:56px;border-radius:50%;background:var(--blue);display:flex;align-items:center;justify-content:center;margin:0 auto 24px;box-shadow:0 4px 16px rgba(47,123,255,.30);">
             <span style="font-size:18px;font-weight:800;color:#fff;font-family:'Plus Jakarta Sans',sans-serif;">3</span>
           </div>
