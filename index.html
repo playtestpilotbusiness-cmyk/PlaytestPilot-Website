@@ -1137,6 +1137,19 @@
       .tester-genre-checkboxes { grid-template-columns: repeat(2,1fr) !important; }
     }
 
+    /* Problem cards: 2-col → 1-col on very small screens */
+    @media(max-width:480px) {
+      .problem-cards-grid { grid-template-columns: 1fr !important; }
+    }
+
+    /* Vetting score cards: 5-col → 2-col → 1-col on mobile */
+    @media(max-width:900px) {
+      .vetting-score-grid { grid-template-columns: repeat(3,1fr) !important; }
+    }
+    @media(max-width:600px) {
+      .vetting-score-grid { grid-template-columns: repeat(2,1fr) !important; }
+    }
+
   </style>
 </head>
 <body>
@@ -1299,18 +1312,19 @@
   <!-- ── Problem ── -->
   <section class="section-py" style="background:var(--blue-lt);">
     <div class="container">
-      <div style="max-width:640px;margin-bottom:48px;">
-        <span class="eyebrow">The problem</span>
-        <h2 class="h2" style="margin-bottom:16px;">You know how your game works. New players do not.</h2>
-        <p class="body-lg">
-          After months of development, it becomes hard to see your game like a first-time player. Objectives feel obvious. Mechanics feel natural. UI labels make sense because your team already knows what they mean.
-        </p>
-        <p class="body-lg" style="margin-top:14px;">
-          But new players bring no context. They miss prompts, misunderstand goals, overlook key information, and sometimes lose interest before they reach the best parts of your game.
-        </p>
-      </div>
+      <div class="two-col two-col-center">
+        <div>
+          <span class="eyebrow">The problem</span>
+          <h2 class="h2" style="margin-bottom:16px;">You know how your game works. New players do not.</h2>
+          <p class="body-lg">
+            After months of development, it becomes hard to see your game like a first-time player. Objectives feel obvious. Mechanics feel natural. UI labels make sense because your team already knows what they mean.
+          </p>
+          <p class="body-lg" style="margin-top:14px;">
+            But new players bring no context. They miss prompts, misunderstand goals, overlook key information, and sometimes lose interest before they reach the best parts of your game.
+          </p>
+        </div>
 
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;" class="problem-cards-grid">
 
         <div class="problem-card">
           <div class="problem-icon">
@@ -1344,7 +1358,8 @@
           <p class="body-sm">Core systems click only after players have already disengaged.</p>
         </div>
 
-      </div>
+        </div><!-- /problem-cards-grid -->
+      </div><!-- /two-col -->
     </div>
   </section>
 
@@ -1664,7 +1679,7 @@
                 <div class="check-icon">
                   <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
                 </div>
-                ~7-day delivery from first session
+                7-day delivery from first session
               </div>
             </div>
 
@@ -1697,8 +1712,8 @@
 
         <div>
           <span class="eyebrow">Best for</span>
-          <h3 class="h3" style="margin-bottom:16px;">Playable PC builds before an important release moment.</h3>
-          <p class="body-md" style="margin-bottom:28px;">Best for playable PC builds where you need to understand onboarding, clarity, pacing, difficulty, or early engagement.</p>
+          <h2 class="h2" style="margin-bottom:16px;">Playable PC builds before an important release moment.</h2>
+          <p class="body-lg" style="margin-bottom:28px;">Best for playable PC builds where you need to understand onboarding, clarity, pacing, difficulty, or early engagement.</p>
 
           <div style="display:flex;flex-direction:column;gap:10px;">
             <div style="display:flex;align-items:center;gap:12px;padding:14px 16px;background:#fff;border-radius:12px;border:1px solid var(--blue-gr);box-shadow:var(--sh-card);">
@@ -1830,11 +1845,6 @@
           <p class="body-lg" style="margin-bottom:28px;">
             Playtest Pilot matches your build with players who actively play your genre, so the feedback is closer to the audience you are trying to reach.
           </p>
-          <div class="genre-dot-text" style="display:inline-flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--blue-gr);border-radius:10px;padding:12px 16px;box-shadow:var(--sh-card);">
-            <div style="width:8px;height:8px;border-radius:50%;background:var(--blue);flex-shrink:0;"></div>
-            <p style="font-size:14px;font-weight:600;color:var(--navy);font-family:'Plus Jakarta Sans',sans-serif;margin:0;">We match based on gameplay habits, not just genre labels.</p>
-          </div>
-
           <!-- Tester pool breadth -->
           <div style="margin-top:16px;padding:14px 16px;background:#fff;border-radius:12px;border:1px solid var(--blue-gr);box-shadow:var(--sh-card);">
             <p style="font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;font-family:'Inter',sans-serif;">Genres currently in our tester pool</p>
@@ -2092,14 +2102,12 @@
         </div>
         <!-- Description -->
         <div class="founder-note-body">
-          <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
-            <p style="font-size:16px;font-weight:700;color:var(--navy);font-family:'Plus Jakarta Sans',sans-serif;">Founder-led beta playtests, now available</p>
-            <span style="font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:3px 8px;border-radius:6px;background:var(--blue);color:#fff;font-family:'Inter',sans-serif;">BETA</span>
-          </div>
-          <p style="font-size:14px;color:var(--muted);line-height:1.65;font-family:'Inter',sans-serif;">Playtest Pilot is run directly by its founder, who has 8 years of experience in the games industry, including time at Rockstar Games and Ubisoft. Every project in this phase is personally reviewed and managed from intake to delivery. Reports are human-reviewed before they reach you.</p>
+          <p style="font-size:14px;color:var(--muted);line-height:1.65;font-family:'Inter',sans-serif;">Playtest Pilot is run directly by its founder, who has 8 years of experience in the games industry, including time at Rockstar Games and Ubisoft. Every project is personally reviewed and managed from intake to delivery. Reports are human-reviewed before they reach you.</p>
           <div style="display:flex;gap:8px;flex-wrap:wrap;">
             <span style="font-size:12px;font-weight:600;color:var(--navy);padding:4px 12px;border:1.5px solid var(--blue-gr);border-radius:8px;font-family:'Inter',sans-serif;">Rockstar Games</span>
             <span style="font-size:12px;font-weight:600;color:var(--navy);padding:4px 12px;border:1.5px solid var(--blue-gr);border-radius:8px;font-family:'Inter',sans-serif;">Ubisoft</span>
+            <span style="font-size:12px;font-weight:600;color:var(--navy);padding:4px 12px;border:1.5px solid var(--blue-gr);border-radius:8px;font-family:'Inter',sans-serif;">Sports Interactive</span>
+            <span style="font-size:12px;font-weight:600;color:var(--navy);padding:4px 12px;border:1.5px solid var(--blue-gr);border-radius:8px;font-family:'Inter',sans-serif;">Play Fusion</span>
           </div>
         </div>
       </div>
@@ -2981,7 +2989,7 @@
             </div>
             <div class="package-item">
               <div class="check-icon"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
-              ~7-day delivery from first session
+              7-day delivery from first session
             </div>
           </div>
 
@@ -3117,7 +3125,7 @@
         </span>
         <span style="display:inline-flex;align-items:center;padding:6px 14px;background:var(--blue-lt);border:1px solid #C3D9FF;border-radius:100px;font-size:12px;font-weight:600;color:var(--blue);">PC playtest</span>
         <span style="display:inline-flex;align-items:center;padding:6px 14px;background:var(--blue-lt);border:1px solid #C3D9FF;border-radius:100px;font-size:12px;font-weight:600;color:var(--blue);">Tactical Roguelite</span>
-        <span style="display:inline-flex;align-items:center;padding:6px 14px;background:#F0FDF4;border:1px solid #BBF7D0;border-radius:100px;font-size:12px;font-weight:600;color:var(--green);">~7 days from first session</span>
+        <span style="display:inline-flex;align-items:center;padding:6px 14px;background:#F0FDF4;border:1px solid #BBF7D0;border-radius:100px;font-size:12px;font-weight:600;color:var(--green);">7 days from first session</span>
       </div>
       <p style="font-size:12px;color:var(--muted);margin-bottom:36px;">All player data and game details are fictional and created for illustration purposes only.</p>
       <button class="btn btn-primary" onclick="document.getElementById('rpt-doc').scrollIntoView({behavior:'smooth'})">View the report ↓</button>
@@ -4388,7 +4396,7 @@
       <div style="margin-top:28px;display:flex;justify-content:center;gap:24px;flex-wrap:wrap;">
         <div style="display:flex;align-items:center;gap:6px;"><span style="width:6px;height:6px;border-radius:50%;background:var(--green);flex-shrink:0;"></span><span style="font-size:13px;color:rgba(255,255,255,.45);font-family:'Inter',sans-serif;">10 genre-matched players</span></div>
         <div style="display:flex;align-items:center;gap:6px;"><span style="width:6px;height:6px;border-radius:50%;background:var(--green);flex-shrink:0;"></span><span style="font-size:13px;color:rgba(255,255,255,.45);font-family:'Inter',sans-serif;">45-minute sessions</span></div>
-        <div style="display:flex;align-items:center;gap:6px;"><span style="width:6px;height:6px;border-radius:50%;background:var(--green);flex-shrink:0;"></span><span style="font-size:13px;color:rgba(255,255,255,.45);font-family:'Inter',sans-serif;">~7-day delivery</span></div>
+        <div style="display:flex;align-items:center;gap:6px;"><span style="width:6px;height:6px;border-radius:50%;background:var(--green);flex-shrink:0;"></span><span style="font-size:13px;color:rgba(255,255,255,.45);font-family:'Inter',sans-serif;">7-day delivery</span></div>
         <div style="display:flex;align-items:center;gap:6px;"><span style="width:6px;height:6px;border-radius:50%;background:var(--green);flex-shrink:0;"></span><span style="font-size:13px;color:rgba(255,255,255,.45);font-family:'Inter',sans-serif;">NDA protected</span></div>
       </div>
     </div>
@@ -4428,7 +4436,7 @@
   <!-- ── What testers do ── -->
   <section id="tester-how" class="section-py" style="background:var(--blue-lt);">
     <div class="container">
-      <div data-reveal style="max-width:580px;margin:0 0 52px;">
+      <div data-reveal style="text-align:center;max-width:580px;margin:0 auto 52px;">
         <span class="eyebrow">What testers do</span>
         <h2 class="h2" style="margin-bottom:16px;">Four things. Every time.</h2>
         <p class="body-md">No lengthy commitments. No complex setup. Each session is straightforward and paid on completion.</p>
@@ -4517,12 +4525,12 @@
   <!-- ── How we vet testers ── -->
   <section class="section-py" style="background:var(--blue-lt);">
     <div class="container">
-      <div data-reveal style="max-width:580px;margin:0 0 52px;">
+      <div data-reveal style="text-align:center;max-width:640px;margin:0 auto 52px;">
         <span class="eyebrow">Tester vetting</span>
         <h2 class="h2" style="margin-bottom:16px;">Every tester goes through a 3-step review.</h2>
         <p class="body-lg">We do not accept testers based on form answers alone. Every applicant goes through a structured review before being added to the active pool.</p>
       </div>
-      <div class="grid-3col" style="max-width:900px;margin:0 auto 44px;">
+      <div class="grid-3col" style="margin-bottom:32px;">
         <div data-reveal class="card" style="padding:28px 24px;">
           <div style="width:40px;height:40px;border-radius:12px;background:#fff;border:1px solid #C3D9FF;display:flex;align-items:center;justify-content:center;margin-bottom:16px;">
             <span style="font-size:15px;font-weight:800;color:var(--blue);font-family:'Plus Jakarta Sans',sans-serif;">1</span>
@@ -4545,28 +4553,28 @@
           <p class="body-sm">Applicants complete a short practice survey, the same format used in live sessions. We score responses for specificity, accuracy, and the quality of reasoning given.</p>
         </div>
       </div>
-      <div data-reveal style="max-width:700px;margin:0 auto;padding:24px 28px;background:#fff;border-radius:16px;border:1px solid #C3D9FF;box-shadow:var(--sh-card);">
-        <p style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--blue);margin-bottom:14px;font-family:'Inter',sans-serif;">What we score</p>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
-          <div style="display:flex;align-items:flex-start;gap:8px;">
-            <div style="width:6px;height:6px;border-radius:50%;background:var(--blue);flex-shrink:0;margin-top:6px;"></div>
-            <span style="font-size:13px;color:var(--navy);font-family:'Inter',sans-serif;font-weight:500;">Observation quality</span>
+      <div data-reveal style="padding:24px 28px;background:#fff;border-radius:16px;border:1px solid #C3D9FF;box-shadow:var(--sh-card);">
+        <p style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--blue);margin-bottom:14px;font-family:'Inter',sans-serif;">What we score in each step</p>
+        <div class="vetting-score-grid" style="display:grid;grid-template-columns:repeat(5,1fr);gap:12px;">
+          <div style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;padding:14px;background:var(--blue-lt);border-radius:10px;border:1px solid #C3D9FF;">
+            <div style="width:6px;height:6px;border-radius:50%;background:var(--blue);"></div>
+            <span style="font-size:13px;color:var(--navy);font-family:'Inter',sans-serif;font-weight:600;">Observation quality</span>
           </div>
-          <div style="display:flex;align-items:flex-start;gap:8px;">
-            <div style="width:6px;height:6px;border-radius:50%;background:var(--blue);flex-shrink:0;margin-top:6px;"></div>
-            <span style="font-size:13px;color:var(--navy);font-family:'Inter',sans-serif;font-weight:500;">Articulation clarity</span>
+          <div style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;padding:14px;background:var(--blue-lt);border-radius:10px;border:1px solid #C3D9FF;">
+            <div style="width:6px;height:6px;border-radius:50%;background:var(--blue);"></div>
+            <span style="font-size:13px;color:var(--navy);font-family:'Inter',sans-serif;font-weight:600;">Articulation clarity</span>
           </div>
-          <div style="display:flex;align-items:flex-start;gap:8px;">
-            <div style="width:6px;height:6px;border-radius:50%;background:var(--blue);flex-shrink:0;margin-top:6px;"></div>
-            <span style="font-size:13px;color:var(--navy);font-family:'Inter',sans-serif;font-weight:500;">Survey reasoning</span>
+          <div style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;padding:14px;background:var(--blue-lt);border-radius:10px;border:1px solid #C3D9FF;">
+            <div style="width:6px;height:6px;border-radius:50%;background:var(--blue);"></div>
+            <span style="font-size:13px;color:var(--navy);font-family:'Inter',sans-serif;font-weight:600;">Survey reasoning</span>
           </div>
-          <div style="display:flex;align-items:flex-start;gap:8px;">
-            <div style="width:6px;height:6px;border-radius:50%;background:var(--blue);flex-shrink:0;margin-top:6px;"></div>
-            <span style="font-size:13px;color:var(--navy);font-family:'Inter',sans-serif;font-weight:500;">Recording setup</span>
+          <div style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;padding:14px;background:var(--blue-lt);border-radius:10px;border:1px solid #C3D9FF;">
+            <div style="width:6px;height:6px;border-radius:50%;background:var(--blue);"></div>
+            <span style="font-size:13px;color:var(--navy);font-family:'Inter',sans-serif;font-weight:600;">Recording setup</span>
           </div>
-          <div style="display:flex;align-items:flex-start;gap:8px;">
-            <div style="width:6px;height:6px;border-radius:50%;background:var(--blue);flex-shrink:0;margin-top:6px;"></div>
-            <span style="font-size:13px;color:var(--navy);font-family:'Inter',sans-serif;font-weight:500;">Genre fit</span>
+          <div style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;padding:14px;background:var(--blue-lt);border-radius:10px;border:1px solid #C3D9FF;">
+            <div style="width:6px;height:6px;border-radius:50%;background:var(--blue);"></div>
+            <span style="font-size:13px;color:var(--navy);font-family:'Inter',sans-serif;font-weight:600;">Genre fit</span>
           </div>
         </div>
         <p style="font-size:12px;color:var(--muted);margin-top:12px;line-height:1.55;font-family:'Inter',sans-serif;">Each category is scored 1 to 5. Testers need an average of 4 or higher across all five to be used for client projects.</p>
@@ -4630,7 +4638,7 @@
   <!-- ── Genres we test ── -->
   <section class="section-py" style="background:var(--blue-lt);">
     <div class="container">
-      <div data-reveal style="max-width:580px;margin:0 0 52px;">
+      <div data-reveal style="text-align:center;max-width:600px;margin:0 auto 52px;">
         <span class="eyebrow">Genre matching</span>
         <h2 class="h2" style="margin-bottom:16px;">We match testers to games that fit what they actually play.</h2>
         <p class="body-md">No random assignments. Tell us what you play and we'll match you with games in the genres you love.</p>
@@ -4919,52 +4927,50 @@
   <!-- ── Discord community ── -->
   <section class="section-py" style="background:#fff;">
     <div class="container">
-      <div class="community-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;">
-        <div data-reveal>
-          <span class="eyebrow">The Community</span>
-          <h2 class="h2" style="margin-bottom:20px;">A private space for accepted testers.</h2>
-          <p style="font-size:17px;line-height:1.7;color:var(--muted);margin-bottom:28px;">Being a Playtest Pilot tester means joining an invite-only Discord community. It's where upcoming playtests are announced, build links are shared, and testers connect between sessions.</p>
-          <div style="display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:10px;background:var(--blue-lt);border:1px solid rgba(47,123,255,.2);">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            <span style="font-size:13px;font-weight:600;color:var(--blue);font-family:'Inter',sans-serif;">Invite-only · Accepted testers only</span>
+      <div data-reveal style="text-align:center;max-width:580px;margin:0 auto 48px;">
+        <span class="eyebrow">The Community</span>
+        <h2 class="h2" style="margin-bottom:20px;">A private space for accepted testers.</h2>
+        <p style="font-size:17px;line-height:1.7;color:var(--muted);margin-bottom:20px;">Being a Playtest Pilot tester means joining an invite-only Discord community. It's where upcoming playtests are announced, build links are shared, and testers connect between sessions.</p>
+        <div style="display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:10px;background:var(--blue-lt);border:1px solid rgba(47,123,255,.2);">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <span style="font-size:13px;font-weight:600;color:var(--blue);font-family:'Inter',sans-serif;">Invite-only · Accepted testers only</span>
+        </div>
+      </div>
+      <div class="community-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:860px;margin:0 auto;">
+        <div data-reveal style="padding:24px;border-radius:16px;border:1.5px solid var(--blue-gr);background:#fff;box-shadow:var(--sh-card);display:flex;align-items:flex-start;gap:16px;">
+          <div style="width:44px;height:44px;border-radius:12px;background:var(--blue-lt);border:1px solid #C3D9FF;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+          </div>
+          <div>
+            <p style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:15px;color:var(--navy);margin-bottom:6px;">First to know</p>
+            <p class="body-sm">Upcoming playtests in your genres are announced in the server before anywhere else.</p>
           </div>
         </div>
-        <div style="display:flex;flex-direction:column;gap:14px;">
-          <div style="padding:20px 22px;border-radius:14px;border:1.5px solid var(--blue-gr);display:flex;align-items:flex-start;gap:14px;">
-            <div style="width:38px;height:38px;border-radius:10px;background:var(--blue-lt);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
-            </div>
-            <div>
-              <p style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:14px;color:var(--navy);margin-bottom:4px;">First to know</p>
-              <p class="body-sm">Upcoming playtests in your genres are announced in the server before anywhere else.</p>
-            </div>
+        <div data-reveal data-delay="100" style="padding:24px;border-radius:16px;border:1.5px solid var(--blue-gr);background:#fff;box-shadow:var(--sh-card);display:flex;align-items:flex-start;gap:16px;">
+          <div style="width:44px;height:44px;border-radius:12px;background:var(--blue-lt);border:1px solid #C3D9FF;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
           </div>
-          <div style="padding:20px 22px;border-radius:14px;border:1.5px solid var(--blue-gr);display:flex;align-items:flex-start;gap:14px;">
-            <div style="width:38px;height:38px;border-radius:10px;background:var(--blue-lt);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
-            </div>
-            <div>
-              <p style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:14px;color:var(--navy);margin-bottom:4px;">Build links posted directly</p>
-              <p class="body-sm">When you're confirmed for a session, the build download link is shared in the server.</p>
-            </div>
+          <div>
+            <p style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:15px;color:var(--navy);margin-bottom:6px;">Build links posted directly</p>
+            <p class="body-sm">When you're confirmed for a session, the build download link is shared in the server.</p>
           </div>
-          <div style="padding:20px 22px;border-radius:14px;border:1.5px solid var(--blue-gr);display:flex;align-items:flex-start;gap:14px;">
-            <div style="width:38px;height:38px;border-radius:10px;background:var(--blue-lt);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-            </div>
-            <div>
-              <p style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:14px;color:var(--navy);margin-bottom:4px;">Community of testers</p>
-              <p class="body-sm">Connect and chat with other testers who love gaming as much as you do.</p>
-            </div>
+        </div>
+        <div data-reveal data-delay="200" style="padding:24px;border-radius:16px;border:1.5px solid var(--blue-gr);background:#fff;box-shadow:var(--sh-card);display:flex;align-items:flex-start;gap:16px;">
+          <div style="width:44px;height:44px;border-radius:12px;background:var(--blue-lt);border:1px solid #C3D9FF;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
           </div>
-          <div style="padding:20px 22px;border-radius:14px;border:1.5px solid var(--blue-gr);display:flex;align-items:flex-start;gap:14px;">
-            <div style="width:38px;height:38px;border-radius:10px;background:var(--blue-lt);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-            </div>
-            <div>
-              <p style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:14px;color:var(--navy);margin-bottom:4px;">Private by default</p>
-              <p class="body-sm">The server is invite-only and stays that way. You earn your spot by being accepted as a tester.</p>
-            </div>
+          <div>
+            <p style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:15px;color:var(--navy);margin-bottom:6px;">Community of testers</p>
+            <p class="body-sm">Connect and chat with other testers who love gaming as much as you do.</p>
+          </div>
+        </div>
+        <div data-reveal data-delay="300" style="padding:24px;border-radius:16px;border:1.5px solid var(--blue-gr);background:#fff;box-shadow:var(--sh-card);display:flex;align-items:flex-start;gap:16px;">
+          <div style="width:44px;height:44px;border-radius:12px;background:var(--blue-lt);border:1px solid #C3D9FF;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          </div>
+          <div>
+            <p style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:15px;color:var(--navy);margin-bottom:6px;">Private by default</p>
+            <p class="body-sm">The server is invite-only and stays that way. You earn your spot by being accepted as a tester.</p>
           </div>
         </div>
       </div>
@@ -5216,7 +5222,7 @@
         <div class="trust-strip" style="justify-content:center;">
           <span class="trust-item"><span class="trust-dot"></span>10 genre-matched players</span>
           <span class="trust-item"><span class="trust-dot"></span>45-minute sessions</span>
-          <span class="trust-item"><span class="trust-dot"></span>~7-day report delivery</span>
+          <span class="trust-item"><span class="trust-dot"></span>7-day report delivery</span>
         </div>
       </div>
     </div>
@@ -5225,11 +5231,11 @@
   <!-- What happens next -->
   <section class="section-py-sm" style="background:var(--blue-lt);">
     <div class="container">
-      <div data-reveal style="max-width:480px;margin:0 0 40px;">
+      <div data-reveal style="text-align:center;max-width:560px;margin:0 auto 40px;">
         <span class="eyebrow">What happens next</span>
         <h2 class="h2" style="font-size:clamp(22px,3vw,28px);margin-bottom:0;">Three steps from submission to report.</h2>
       </div>
-      <div class="grid-3col" style="max-width:860px;margin:0 auto;">
+      <div class="grid-3col">
         <div data-reveal class="card hover-lift" style="padding:28px 24px;position:relative;">
           <div style="width:40px;height:40px;border-radius:12px;background:var(--blue);display:flex;align-items:center;justify-content:center;margin-bottom:20px;">
             <span style="font-size:14px;font-weight:800;color:#fff;font-family:'Plus Jakarta Sans',sans-serif;">1</span>
