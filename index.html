@@ -1198,6 +1198,43 @@
       .community-box-grid { grid-template-columns: 1fr !important; }
     }
 
+    /* ── Legal pages ── */
+    .legal-layout { display:grid; grid-template-columns:200px 1fr; gap:64px; max-width:920px; margin:0 auto; align-items:start; }
+    .legal-toc { position:sticky; top:88px; display:flex; flex-direction:column; gap:1px; }
+    .legal-toc-link { font-size:13px; font-weight:500; color:var(--muted); text-decoration:none; padding:8px 0 8px 14px; border-left:2px solid var(--blue-gr); transition:color .15s,border-color .15s; }
+    .legal-toc-link:hover { color:var(--blue); border-left-color:#C3D9FF; }
+    .legal-content section { margin-bottom:44px; scroll-margin-top:88px; }
+    .legal-content section:last-child { margin-bottom:0; }
+    .legal-content h3 { display:flex; align-items:baseline; gap:10px; margin-bottom:14px; }
+    .legal-content .legal-num { font-family:'Plus Jakarta Sans',sans-serif; font-size:13px; font-weight:700; color:var(--blue); }
+    .legal-content p { font-size:15px; line-height:1.75; color:var(--muted); margin-bottom:14px; }
+    .legal-content p:last-child { margin-bottom:0; }
+    .legal-content ul { margin:0 0 14px 20px; }
+    .legal-content li { font-size:15px; line-height:1.75; color:var(--muted); margin-bottom:6px; }
+    .legal-content strong { color:var(--navy); font-weight:600; }
+    .legal-content a { color:var(--blue); text-decoration:underline; text-decoration-color:#C3D9FF; text-underline-offset:2px; }
+    .legal-content a:hover { text-decoration-color:var(--blue); }
+    .legal-table { width:100%; border-collapse:collapse; margin-bottom:14px; font-size:14px; }
+    .legal-table th, .legal-table td { text-align:left; padding:10px 12px; border-bottom:1px solid var(--blue-gr); vertical-align:top; }
+    .legal-table th { font-family:'Inter',sans-serif; font-weight:600; color:var(--navy); font-size:12px; text-transform:uppercase; letter-spacing:.04em; }
+    .legal-table td { color:var(--muted); line-height:1.6; }
+    @media(max-width:860px) {
+      .legal-layout { grid-template-columns:1fr; gap:32px; }
+      .legal-toc { position:static; flex-direction:row; flex-wrap:wrap; gap:8px 18px; padding-bottom:16px; border-bottom:1px solid var(--blue-gr); margin-bottom:8px; }
+      .legal-toc-link { border-left:none; padding:4px 0; }
+    }
+
+    /* ── Cookie notice ── */
+    #cookie-banner { position:fixed; left:0; right:0; bottom:0; z-index:200; background:var(--navy); border-top:1px solid rgba(255,255,255,.08); box-shadow:0 -8px 32px rgba(30,36,48,.18); transform:translateY(120%); transition:transform .4s cubic-bezier(.16,1,.3,1); }
+    #cookie-banner.show { transform:translateY(0); }
+    .cookie-banner-inner { display:flex; align-items:center; justify-content:space-between; gap:24px; padding:20px 24px; flex-wrap:wrap; }
+    .cookie-banner-text { font-size:13px; line-height:1.6; color:rgba(255,255,255,.65); max-width:640px; }
+    @media(max-width:640px) {
+      .cookie-banner-inner { padding:16px 20px; }
+      .cookie-banner-actions { width:100%; }
+      .cookie-banner-actions .btn { width:100%; justify-content:center; }
+    }
+
   </style>
 </head>
 <body>
@@ -1235,6 +1272,19 @@
             onclick="showPage('book');closeMobileMenu()">Book a Playtest</button>
   </div>
 </nav>
+
+
+<!-- ═══════════════════════════════════════════
+     COOKIE NOTICE
+════════════════════════════════════════════ -->
+<div id="cookie-banner" role="region" aria-label="Cookie notice">
+  <div class="container cookie-banner-inner">
+    <p class="cookie-banner-text">We don't use analytics or advertising cookies. We only store a small local flag to remember you've seen this notice. <span style="text-decoration:underline;text-decoration-color:rgba(255,255,255,.35);text-underline-offset:2px;cursor:pointer;color:#fff;" onclick="showPage('privacy');closeCookieBanner();">Read our Privacy Policy</span>.</p>
+    <div class="cookie-banner-actions">
+      <button class="btn btn-primary" style="padding:10px 20px;font-size:13px;" onclick="acceptCookieBanner()">Got it</button>
+    </div>
+  </div>
+</div>
 
 
 <!-- ═══════════════════════════════════════════
@@ -5446,6 +5496,254 @@
 
 
 <!-- ═══════════════════════════════════════════
+     PAGE: PRIVACY POLICY
+════════════════════════════════════════════ -->
+<div id="page-privacy" class="page">
+
+  <section class="hero-section" style="padding:72px 0 40px;">
+    <div class="hero-dot-grid"></div>
+    <div class="container" style="position:relative;">
+      <div style="max-width:720px;">
+        <span class="eyebrow">Legal</span>
+        <h1 class="h1" style="margin-bottom:12px;">Privacy Policy</h1>
+        <p class="body-md">Last updated August 5, 2026 · Applies to www.playtestpilot.com</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-py" style="background:#fff;padding-top:8px;">
+    <div class="container">
+      <div class="legal-layout">
+        <nav class="legal-toc" aria-label="Privacy policy sections">
+          <a href="#pp-1" class="legal-toc-link">Who we are</a>
+          <a href="#pp-2" class="legal-toc-link">Data we collect</a>
+          <a href="#pp-3" class="legal-toc-link">How we use it</a>
+          <a href="#pp-4" class="legal-toc-link">Who we share it with</a>
+          <a href="#pp-5" class="legal-toc-link">International transfers</a>
+          <a href="#pp-6" class="legal-toc-link">How long we keep it</a>
+          <a href="#pp-7" class="legal-toc-link">Your rights</a>
+          <a href="#pp-8" class="legal-toc-link">Cookies</a>
+          <a href="#pp-9" class="legal-toc-link">Children</a>
+          <a href="#pp-10" class="legal-toc-link">Security</a>
+          <a href="#pp-11" class="legal-toc-link">Changes</a>
+          <a href="#pp-12" class="legal-toc-link">Contact</a>
+        </nav>
+        <div class="legal-content">
+
+          <section id="pp-1">
+            <h3><span class="legal-num">01</span> Who we are</h3>
+            <p>Playtest Pilot ("<strong>we</strong>", "<strong>us</strong>") is an independently operated playtesting service, run as an unregistered sole proprietorship by an individual based in Italy. For the purposes of the EU General Data Protection Regulation (GDPR), we are the <strong>data controller</strong> of the personal data described in this policy.</p>
+            <p>You can reach us at <a href="mailto:playtestpilotbusiness@gmail.com">playtestpilotbusiness@gmail.com</a> for any question about this policy or your personal data.</p>
+          </section>
+
+          <section id="pp-2">
+            <h3><span class="legal-num">02</span> Data we collect</h3>
+            <p>We only collect personal data that you choose to give us, through one of two forms on this site.</p>
+            <p><strong>Tester applications.</strong> Full name, email address, Discord username, country and time zone, favourite genres, PC specifications, recording setup, microphone availability, recent games played, weekly availability, your answer to our screening question, and, optionally, your Steam profile URL and previous testing experience. The form also records your confirmation that you are 18 or older and your acknowledgement of our confidentiality requirements.</p>
+            <p><strong>Playtest bookings.</strong> Your name and email address, and, optionally, your studio or team name, plus details about your game (title, genre, development stage, description, playtest goals, preferred timeline, and any additional notes you choose to share).</p>
+            <p>If you're accepted as a tester, we may later ask for additional details needed to run and pay for a session, such as a payment email address; this is collected separately, outside these forms, at that stage.</p>
+            <p>We do not knowingly collect any special category data (for example, health, political opinions, or religious beliefs) through these forms, and ask that you avoid including such details in free-text answers.</p>
+          </section>
+
+          <section id="pp-3">
+            <h3><span class="legal-num">03</span> How we use it, and why it's lawful</h3>
+            <table class="legal-table">
+              <tr><th>Purpose</th><th>Legal basis (GDPR Art. 6)</th></tr>
+              <tr><td>Reviewing and responding to tester applications</td><td>Steps taken at your request before a potential agreement, and our legitimate interest in recruiting suitable testers</td></tr>
+              <tr><td>Managing playtest booking inquiries and delivering the service</td><td>Performance of a contract, or steps taken at your request before entering one</td></tr>
+              <tr><td>Communicating with you about your application or booking</td><td>Legitimate interest in responding to your inquiry</td></tr>
+              <tr><td>Enforcing confidentiality/NDA obligations over unreleased game content</td><td>Legitimate interest of Playtest Pilot and our client developers</td></tr>
+              <tr><td>Keeping records for tax, accounting, and legal purposes</td><td>Legal obligation</td></tr>
+            </table>
+            <p>We do not use your personal data for automated decision-making or profiling that produces legal or similarly significant effects.</p>
+          </section>
+
+          <section id="pp-4">
+            <h3><span class="legal-num">04</span> Who we share it with</h3>
+            <p>We keep the number of parties who see your data as small as possible.</p>
+            <ul>
+              <li><strong>Web3Forms</strong> (web3forms.com), a third-party form-processing service that receives your form submission and delivers it to our email inbox. It acts as a data processor on our behalf and does not use your data for its own purposes.</li>
+              <li><strong>Google</strong> serves the fonts used on this site (Google Fonts). Loading a page sends your IP address to Google's servers as a technical side effect of the request; Google does not receive your form data through this.</li>
+              <li>If you're accepted for a playtest, your feedback and, where applicable, session recordings are shared with the relevant game developer, which is the purpose of the service; we don't share your contact details with them without your knowledge.</li>
+            </ul>
+            <p>We do not sell your personal data, and we do not share it with third parties for their own marketing purposes.</p>
+          </section>
+
+          <section id="pp-5">
+            <h3><span class="legal-num">05</span> International transfers</h3>
+            <p>Web3Forms and Google may process data on servers located outside the European Economic Area, including in the United States. Where this happens, we rely on the safeguards those providers put in place, such as the EU-U.S. Data Privacy Framework or Standard Contractual Clauses. You can review their own privacy documentation at <a href="https://web3forms.com/privacy" target="_blank" rel="noopener">web3forms.com/privacy</a> and <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.</p>
+          </section>
+
+          <section id="pp-6">
+            <h3><span class="legal-num">06</span> How long we keep it</h3>
+            <p>We keep tester application and playtest booking data for <strong>24 months after your last contact with us</strong> (for example, the date of your application, your last booking, or your last reply to us), after which it's deleted or anonymised, unless we're required to keep it longer for legal or accounting reasons, or you ask us to delete it sooner.</p>
+          </section>
+
+          <section id="pp-7">
+            <h3><span class="legal-num">07</span> Your rights</h3>
+            <p>Under the GDPR, you have the right to:</p>
+            <ul>
+              <li>Access the personal data we hold about you</li>
+              <li>Correct inaccurate or incomplete data</li>
+              <li>Request erasure of your data ("right to be forgotten")</li>
+              <li>Restrict or object to certain processing</li>
+              <li>Receive your data in a portable format</li>
+              <li>Withdraw consent at any time, where processing is based on consent</li>
+              <li>Lodge a complaint with a supervisory authority, such as Italy's Garante per la protezione dei dati personali (<a href="https://www.garanteprivacy.it" target="_blank" rel="noopener">garanteprivacy.it</a>) or the data protection authority in your own EU country of residence</li>
+            </ul>
+            <p>To exercise any of these rights, email <a href="mailto:playtestpilotbusiness@gmail.com">playtestpilotbusiness@gmail.com</a>. We'll respond within one month, as required by law.</p>
+          </section>
+
+          <section id="pp-8">
+            <h3><span class="legal-num">08</span> Cookies and local storage</h3>
+            <p>This site does not use analytics, advertising, or tracking cookies. The only browser storage we use is a single local-storage entry that remembers whether you've dismissed the cookie notice at the bottom of the page; it contains no personal data, is never sent to a server, and is strictly necessary for the notice to work, so it doesn't require consent under the ePrivacy rules.</p>
+            <p>If we ever add analytics or other non-essential cookies in the future, we'll update this policy and ask for your consent first.</p>
+          </section>
+
+          <section id="pp-9">
+            <h3><span class="legal-num">09</span> Children's privacy</h3>
+            <p>Playtest Pilot is not directed at children. Testers must confirm they are 18 or older before applying, and we don't knowingly collect personal data from anyone under 18.</p>
+          </section>
+
+          <section id="pp-10">
+            <h3><span class="legal-num">10</span> Security</h3>
+            <p>We take reasonable technical and organisational measures to protect your data, including limiting access to it and using reputable third-party providers for form handling. No method of transmission or storage is completely secure, so we can't guarantee absolute security.</p>
+          </section>
+
+          <section id="pp-11">
+            <h3><span class="legal-num">11</span> Changes to this policy</h3>
+            <p>We may update this policy from time to time. Material changes will be reflected by updating the "last updated" date at the top of this page.</p>
+          </section>
+
+          <section id="pp-12">
+            <h3><span class="legal-num">12</span> Contact us</h3>
+            <p>For anything related to this policy or your personal data, email <a href="mailto:playtestpilotbusiness@gmail.com">playtestpilotbusiness@gmail.com</a>.</p>
+          </section>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+
+<!-- ═══════════════════════════════════════════
+     PAGE: TERMS OF SERVICE
+════════════════════════════════════════════ -->
+<div id="page-terms" class="page">
+
+  <section class="hero-section" style="padding:72px 0 40px;">
+    <div class="hero-dot-grid"></div>
+    <div class="container" style="position:relative;">
+      <div style="max-width:720px;">
+        <span class="eyebrow">Legal</span>
+        <h1 class="h1" style="margin-bottom:12px;">Terms of Service</h1>
+        <p class="body-md">Last updated August 5, 2026 · Applies to www.playtestpilot.com</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-py" style="background:#fff;padding-top:8px;">
+    <div class="container">
+      <div class="legal-layout">
+        <nav class="legal-toc" aria-label="Terms of service sections">
+          <a href="#tos-1" class="legal-toc-link">Acceptance</a>
+          <a href="#tos-2" class="legal-toc-link">The service</a>
+          <a href="#tos-3" class="legal-toc-link">Eligibility</a>
+          <a href="#tos-4" class="legal-toc-link">Bookings</a>
+          <a href="#tos-5" class="legal-toc-link">Payment</a>
+          <a href="#tos-6" class="legal-toc-link">Cancellations</a>
+          <a href="#tos-7" class="legal-toc-link">Testers</a>
+          <a href="#tos-8" class="legal-toc-link">Confidentiality</a>
+          <a href="#tos-9" class="legal-toc-link">Intellectual property</a>
+          <a href="#tos-10" class="legal-toc-link">Disclaimers</a>
+          <a href="#tos-11" class="legal-toc-link">Termination</a>
+          <a href="#tos-12" class="legal-toc-link">Governing law</a>
+          <a href="#tos-13" class="legal-toc-link">Changes</a>
+          <a href="#tos-14" class="legal-toc-link">Contact</a>
+        </nav>
+        <div class="legal-content">
+
+          <section id="tos-1">
+            <h3><span class="legal-num">01</span> Acceptance of these terms</h3>
+            <p>By submitting a tester application, submitting a playtest booking request, or otherwise using this site, you agree to these Terms of Service. If you don't agree, please don't use the site or its forms.</p>
+          </section>
+
+          <section id="tos-2">
+            <h3><span class="legal-num">02</span> The service</h3>
+            <p>Playtest Pilot connects indie PC game developers with genre-matched players for structured playtesting sessions. Our standard package, the Player Insight Playtest, includes 10 genre-matched players, 45-minute recorded sessions, and a written report delivered within approximately 7 days of sessions starting, for a listed price of €499. Exact scope, timeline, and pricing for any engagement are confirmed directly with you before work begins, and may differ from the standard package based on your game and requirements.</p>
+          </section>
+
+          <section id="tos-3">
+            <h3><span class="legal-num">03</span> Eligibility</h3>
+            <p>You must be 18 or older to apply as a tester or to book a playtest. By applying or booking, you confirm the information you provide is accurate, and that you have the right to submit it, for example that you're authorised to share the game or build being tested.</p>
+          </section>
+
+          <section id="tos-4">
+            <h3><span class="legal-num">04</span> Booking process</h3>
+            <p>Submitting the booking form is a request, not a confirmed order. No contract or payment obligation is formed until we've reviewed your submission and confirmed scope, timeline, and price with you directly, typically within 48 hours.</p>
+          </section>
+
+          <section id="tos-5">
+            <h3><span class="legal-num">05</span> Payment</h3>
+            <p>No payment is required to submit a booking request. Once scope and pricing are confirmed, we'll agree payment terms and method with you directly before sessions are scheduled.</p>
+          </section>
+
+          <section id="tos-6">
+            <h3><span class="legal-num">06</span> Cancellations and rescheduling</h3>
+            <p>Either party may request to reschedule a confirmed playtest with reasonable notice. Specific cancellation and refund terms, if any, are confirmed in writing at the time of booking.</p>
+          </section>
+
+          <section id="tos-7">
+            <h3><span class="legal-num">07</span> Testers</h3>
+            <p>Accepted testers are paid per completed session; payment amount and method are confirmed before each session. Testers are independent participants, not employees, contractors, or agents of Playtest Pilot or of any developer whose game they test. We expect testers to provide honest, good-faith feedback, and to complete sessions they've committed to or give reasonable notice if they can't.</p>
+          </section>
+
+          <section id="tos-8">
+            <h3><span class="legal-num">08</span> Confidentiality</h3>
+            <p>Games, builds, and materials shared with testers are confidential. Testers must sign a confidentiality agreement (NDA) before accessing any unreleased build, and must not disclose, stream, record outside the official session, publish, or otherwise share any information about a game they've tested, except with our and the developer's written permission.</p>
+          </section>
+
+          <section id="tos-9">
+            <h3><span class="legal-num">09</span> Intellectual property</h3>
+            <p>Developers retain all rights to their game, builds, and related materials. Playtest Pilot retains rights to its report format and methodology, but the findings and content of your report are for your use. Session recordings are used only to prepare your report and for internal quality review, and are not published or shared beyond that without your consent.</p>
+          </section>
+
+          <section id="tos-10">
+            <h3><span class="legal-num">10</span> Disclaimers</h3>
+            <p>Playtesting feedback and reports reflect the opinions and experiences of individual testers. They're intended to help you understand player experience, but they aren't a guarantee of your game's future reception, sales, or review scores. The service is provided on an "as is" basis, and to the extent permitted by law, our liability for any claim relating to the service is limited to the fees you paid for the relevant engagement.</p>
+          </section>
+
+          <section id="tos-11">
+            <h3><span class="legal-num">11</span> Termination</h3>
+            <p>We may decline, pause, or discontinue an engagement, including for a breach of these terms, a violation of confidentiality obligations, or content we reasonably believe is unlawful or unsafe to test.</p>
+          </section>
+
+          <section id="tos-12">
+            <h3><span class="legal-num">12</span> Governing law</h3>
+            <p>These terms are governed by the laws of Italy, without prejudice to any mandatory consumer-protection rights you may have under the law of your own country of residence if you're an EU consumer.</p>
+          </section>
+
+          <section id="tos-13">
+            <h3><span class="legal-num">13</span> Changes to these terms</h3>
+            <p>We may update these terms from time to time. Material changes will be reflected by updating the "last updated" date at the top of this page.</p>
+          </section>
+
+          <section id="tos-14">
+            <h3><span class="legal-num">14</span> Contact us</h3>
+            <p>Questions about these terms? Email <a href="mailto:playtestpilotbusiness@gmail.com">playtestpilotbusiness@gmail.com</a>.</p>
+          </section>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+
+<!-- ═══════════════════════════════════════════
      FOOTER
 ════════════════════════════════════════════ -->
 <footer>
@@ -5462,7 +5760,7 @@
       </div>
     </div>
     <div style="margin-top:32px;padding-top:24px;border-top:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
-      <p style="font-size:13px;color:rgba(255,255,255,.35);">© 2026 Playtest Pilot. All rights reserved.</p>
+      <p style="font-size:13px;color:rgba(255,255,255,.35);">© 2026 Playtest Pilot. All rights reserved. · <span class="footer-link" style="color:rgba(255,255,255,.35);" onclick="showPage('privacy')">Privacy Policy</span> · <span class="footer-link" style="color:rgba(255,255,255,.35);" onclick="showPage('terms')">Terms of Service</span></p>
       <p style="font-size:13px;color:rgba(255,255,255,.35);">Genre-matched players · Evidence-backed findings · Confidential and secure</p>
     </div>
   </div>
@@ -5500,11 +5798,27 @@
   // ── Initial URL-based routing ──
   (function() {
     const path = window.location.pathname;
-    const pageMap = { '/': 'home', '/home': 'home', '/service': 'service', '/report': 'report', '/tester': 'tester', '/book': 'book' };
+    const pageMap = { '/': 'home', '/home': 'home', '/service': 'service', '/report': 'report', '/tester': 'tester', '/book': 'book', '/privacy': 'privacy', '/terms': 'terms' };
     const page = pageMap[path] || 'home';
     const canonicalPath = page === 'home' ? '/' : '/' + page;
     history.replaceState({ page: page }, '', canonicalPath);
     if (page !== 'home') showPage(page, false);
+  })();
+
+  // ── Cookie notice ──
+  function acceptCookieBanner() {
+    try { localStorage.setItem('ppCookieNoticeSeen', '1'); } catch (e) {}
+    closeCookieBanner();
+  }
+  function closeCookieBanner() {
+    document.getElementById('cookie-banner').classList.remove('show');
+  }
+  (function initCookieBanner() {
+    let seen = false;
+    try { seen = localStorage.getItem('ppCookieNoticeSeen') === '1'; } catch (e) {}
+    if (!seen) {
+      setTimeout(function () { document.getElementById('cookie-banner').classList.add('show'); }, 600);
+    }
   })();
 
   // ── Process accordion ──
