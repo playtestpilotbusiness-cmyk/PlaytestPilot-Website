@@ -544,6 +544,15 @@
       transition: color .15s;
     }
     .footer-link:hover { color: rgba(255,255,255,.9); }
+    .footer-social { display: flex; gap: 10px; }
+    .footer-social-link {
+      width: 38px; height: 38px; border-radius: 10px; display: inline-flex; align-items: center; justify-content: center;
+      color: rgba(255,255,255,.7); background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.12);
+      transition: transform .2s cubic-bezier(.16,1,.3,1), background .15s, color .15s;
+    }
+    .footer-social-link:hover { transform: translateY(-2px); background: rgba(255,255,255,.14); color: #fff; }
+    .footer-social-link:active { transform: scale(.96); }
+    .footer-social-link:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
 
     /* ── Metrics strip ── */
     .metrics-strip {
@@ -4781,7 +4790,7 @@
         </div>
         <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
           <a href="#tester-form" hidden class="btn btn-primary apps-open-only" style="font-size:15px;padding:15px 32px;" onclick="document.getElementById('tester-form').scrollIntoView({behavior:'smooth'});return false;">Apply to Become a Tester</a>
-          <a href="https://x.com/Playtest_Pilot" target="_blank" rel="noopener" class="btn btn-primary apps-closed-only" style="font-size:15px;padding:15px 32px;">Follow for reopening news <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
+          <a href="https://x.com/Playtest_Pilot" target="_blank" rel="noopener" class="btn btn-primary apps-closed-only" style="font-size:15px;padding:15px 32px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Follow us on X for updates</a>
           <a href="#tester-how" class="btn btn-secondary" style="font-size:15px;padding:15px 32px;" onclick="document.getElementById('tester-how').scrollIntoView({behavior:'smooth'});return false;">How it works</a>
         </div>
         <div class="trust-strip" style="justify-content:center;margin-top:24px;">
@@ -4954,7 +4963,7 @@
           <h2 class="h2" style="margin-bottom:20px;">What you need to get started.</h2>
           <p class="body-lg" style="margin-bottom:36px;">Builds are unreleased Windows games that you install and run on your own machine while recording, so you need a gaming PC that can do both at once. Macs, consoles, and handhelds such as the Steam Deck can't be used.</p>
           <a href="#tester-form" hidden class="btn btn-primary apps-open-only" onclick="document.getElementById('tester-form').scrollIntoView({behavior:'smooth'});return false;">Apply Now</a>
-          <a href="https://x.com/Playtest_Pilot" target="_blank" rel="noopener" class="btn btn-secondary apps-closed-only">Applications closed · Follow for news</a>
+          <a href="https://x.com/Playtest_Pilot" target="_blank" rel="noopener" class="btn btn-secondary apps-closed-only"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Applications closed · Follow us on X</a>
         </div>
         <div data-reveal data-delay="100" style="display:flex;flex-direction:column;gap:16px;">
           <div class="card hover-lift" style="padding:20px 24px;display:flex;align-items:center;gap:16px;">
@@ -6681,7 +6690,7 @@
       <div style="max-width:720px;">
         <span class="eyebrow">Legal</span>
         <h1 class="h1" style="margin-bottom:12px;">Privacy Policy</h1>
-        <p class="body-md">Last updated August 24, 2026 · Applies to www.playtestpilot.com</p>
+        <p class="body-md">Last updated October 22, 2026 · Applies to www.playtestpilot.com</p>
       </div>
     </div>
   </section>
@@ -6714,8 +6723,8 @@
           <section id="pp-2">
             <h3><span class="legal-num">02</span> Data we collect</h3>
             <p>We only collect personal data that you choose to give us, through one of two forms on this site.</p>
-            <p><strong>Tester applications.</strong> Full name, email address, Discord username, country and time zone, favourite genres, PC specifications, recording setup, microphone availability, recent games played, weekly availability, your answer to our screening question, and, optionally, your Steam profile URL and previous testing experience. The form also records your confirmation that you are 18 or older and your acknowledgement of our confidentiality requirements.</p>
-            <p><strong>Playtest bookings.</strong> Your name and email address, and, optionally, your studio or team name, plus details about your game (title, genre, development stage, description, playtest goals, preferred timeline, and any additional notes you choose to share).</p>
+            <p><strong>Tester applications.</strong> Applications are currently closed, so this form isn't collecting new data; when it's open, it collects: full name, email address, Discord username, country and time zone, favourite genres, the type of PC you play on, PC specifications, recording setup, microphone availability, recent games played, weekly availability, your answer to our screening question, and, optionally, your Steam profile URL and previous testing experience. The form also records your confirmation that you are 18 or older and your acknowledgement of our confidentiality requirements.</p>
+            <p><strong>Playtest bookings.</strong> Your name and email address, which package you're asking about (the Player Insight Playtest or the free taster), and, optionally, your studio or team name, plus details about your game (title, genre, any milestone you're working towards, description, playtest goals, preferred timeline, and any additional notes you choose to share).</p>
             <p>If you're accepted as a tester, we may later ask for additional details needed to run and pay for a session, such as a payment email address; this is collected separately, outside these forms, at that stage.</p>
             <p><strong>Identity verification.</strong> Before your first Project, we may ask you to show a government-issued identity document, to confirm your identity, confirm that you're aged 18 or over, and meet our record-keeping and payment obligations. We only ask for what's necessary for that purpose, and, as explained in section 06 below, we delete the document itself as soon as verification is complete.</p>
             <p>We do not knowingly collect any special category data (for example, health, political opinions, or religious beliefs) through these forms, and ask that you avoid including such details in free-text answers.</p>
@@ -6879,12 +6888,12 @@
 
           <section id="tos-7">
             <h3><span class="legal-num">07</span> Testers</h3>
-            <p>Accepted testers are paid per completed session; payment amount and method are confirmed before each session. Testers are independent participants, not employees, contractors, or agents of Playtest Pilot or of any developer whose game they test. We expect testers to provide honest, good-faith feedback, and to complete sessions they've committed to or give reasonable notice if they can't.</p>
+            <p>Accepted testers are paid a flat fee per completed session, currently €15, within 14 days of the session being confirmed valid; the payment method is agreed with each tester. Testers are independent participants, not employees, contractors, or agents of Playtest Pilot or of any developer whose game they test. We expect testers to provide honest, good-faith feedback, and to complete sessions they've committed to or give reasonable notice if they can't.</p>
           </section>
 
           <section id="tos-8">
             <h3><span class="legal-num">08</span> Confidentiality</h3>
-            <p>Games, builds, and materials shared with testers are confidential. Testers must sign a confidentiality agreement (NDA) once, before accessing their first unreleased build; this agreement covers all subsequent builds and projects, and testers must not disclose, stream, record outside the official session, publish, or otherwise share any information about a game they've tested, except with our and the developer's written permission.</p>
+            <p>Games, builds, and materials shared with testers are confidential. Testers must sign a confidentiality agreement (NDA) once, before accessing their first unreleased build; this agreement covers all subsequent builds and projects, testers confirm it in writing before each new project, and testers must not disclose, stream, record outside the official session, publish, or otherwise share any information about a game they've tested, except with our and the developer's written permission.</p>
           </section>
 
           <section id="tos-9">
@@ -6940,6 +6949,14 @@
         <span class="footer-link" onclick="showPage('report')">Sample Report</span>
         <span class="footer-link" onclick="showPage('tester')">Become a Tester</span>
         <span class="footer-link" onclick="showPage('book')">Book a Playtest</span>
+      </div>
+      <div class="footer-social">
+        <a class="footer-social-link" href="https://x.com/Playtest_Pilot" target="_blank" rel="noopener" aria-label="Playtest Pilot on X">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+        <a class="footer-social-link" href="https://www.reddit.com/user/PlaytestPilot/" target="_blank" rel="noopener" aria-label="Playtest Pilot on Reddit">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.373 0 0 5.373 0 12c0 3.314 1.343 6.314 3.515 8.485l-2.286 2.286C.775 23.225 1.097 24 1.738 24H12c6.627 0 12-5.373 12-12S18.627 0 12 0Zm4.388 3.199c1.104 0 1.999.895 1.999 1.999 0 1.105-.895 2-1.999 2-.946 0-1.739-.657-1.947-1.539v.002c-1.147.162-2.032 1.15-2.032 2.341v.007c1.776.067 3.4.567 4.686 1.363.473-.363 1.064-.58 1.707-.58 1.547 0 2.802 1.254 2.802 2.802 0 1.117-.655 2.081-1.601 2.531-.088 3.256-3.637 5.876-7.997 5.876-4.361 0-7.905-2.617-7.998-5.87-.954-.447-1.614-1.415-1.614-2.538 0-1.548 1.255-2.802 2.803-2.802.645 0 1.239.218 1.712.585 1.275-.79 2.881-1.291 4.64-1.365v-.01c0-1.663 1.263-3.034 2.88-3.207.188-.911.993-1.595 1.959-1.595Zm-8.085 8.376c-.784 0-1.459.78-1.506 1.797-.047 1.016.64 1.429 1.426 1.429.786 0 1.371-.369 1.418-1.385.047-1.017-.553-1.841-1.338-1.841Zm7.406 0c-.786 0-1.385.824-1.338 1.841.047 1.017.634 1.385 1.418 1.385.785 0 1.473-.413 1.426-1.429-.046-1.017-.721-1.797-1.506-1.797Zm-3.703 4.013c-.974 0-1.907.048-2.77.135-.147.015-.241.168-.183.305.483 1.154 1.622 1.964 2.953 1.964 1.33 0 2.47-.81 2.953-1.964.057-.137-.037-.29-.184-.305-.863-.087-1.795-.135-2.769-.135Z"/></svg>
+        </a>
       </div>
     </div>
     <div style="margin-top:32px;padding-top:24px;border-top:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
