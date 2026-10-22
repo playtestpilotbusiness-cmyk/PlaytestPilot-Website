@@ -69,6 +69,7 @@
     }
 
     html { color-scheme: light only; }
+    [hidden] { display: none !important; }
 
     body {
       font-family: 'Inter', sans-serif;
@@ -1327,6 +1328,17 @@
     @media (hover: none) {
       .rpt-hover:hover, .glass-item:hover, .taster-point:hover, .uc-look-item:hover, .rlist-item:hover { transform: none; }
     }
+
+    /* ── Tester applications closed ── */
+    .apps-closed-notice { display: flex; align-items: flex-start; gap: 12px; max-width: 560px; margin: 0 auto 28px; padding: 14px 18px; text-align: left;
+      background: #FFFBEB; border: 1px solid #FDE68A; border-radius: 12px; }
+    .apps-closed-notice p { font-size: 14px; line-height: 1.6; color: #92400E; }
+    .apps-closed-notice a { color: #92400E; text-decoration: underline; text-underline-offset: 2px; }
+    .apps-closed-notice a:hover { color: #78350F; }
+    .apps-closed-dot { width: 8px; height: 8px; border-radius: 50%; background: #F59E0B; flex-shrink: 0; margin-top: 8px; }
+    .apps-closed-panel { text-align: center; padding: 48px 32px; background: var(--blue-lt); border: 1px solid #C3D9FF; border-radius: 20px; }
+    .apps-closed-icon { width: 56px; height: 56px; border-radius: 16px; background: #fff; border: 1px solid #C3D9FF; display: flex; align-items: center; justify-content: center; margin: 0 auto 18px; }
+    @media(max-width:640px) { .apps-closed-panel { padding: 32px 20px; } }
 
     /* ── Legal pages ── */
     .legal-layout { display:grid; grid-template-columns:200px 1fr; gap:64px; max-width:920px; margin:0 auto; align-items:start; }
@@ -4763,8 +4775,13 @@
         <p class="body-lg" style="max-width:560px;margin:0 auto 32px;">
           Playtest Pilot recruits passionate gamers to test unreleased indie PC games. You play, record your session, share honest feedback, and get paid for it.
         </p>
+        <div class="apps-closed-only apps-closed-notice" role="status">
+          <span class="apps-closed-dot" aria-hidden="true"></span>
+          <p><strong>Applications are closed for now.</strong> Our tester pool is full, so we aren't taking new applications. We'll reopen when we need more testers and announce it on <a href="https://x.com/Playtest_Pilot" target="_blank" rel="noopener">X (@Playtest_Pilot)</a>.</p>
+        </div>
         <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
-          <a href="#tester-form" class="btn btn-primary" style="font-size:15px;padding:15px 32px;" onclick="document.getElementById('tester-form').scrollIntoView({behavior:'smooth'});return false;">Apply to Become a Tester</a>
+          <a href="#tester-form" hidden class="btn btn-primary apps-open-only" style="font-size:15px;padding:15px 32px;" onclick="document.getElementById('tester-form').scrollIntoView({behavior:'smooth'});return false;">Apply to Become a Tester</a>
+          <a href="https://x.com/Playtest_Pilot" target="_blank" rel="noopener" class="btn btn-primary apps-closed-only" style="font-size:15px;padding:15px 32px;">Follow for reopening news <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
           <a href="#tester-how" class="btn btn-secondary" style="font-size:15px;padding:15px 32px;" onclick="document.getElementById('tester-how').scrollIntoView({behavior:'smooth'});return false;">How it works</a>
         </div>
         <div class="trust-strip" style="justify-content:center;margin-top:24px;">
@@ -4936,7 +4953,8 @@
           <span class="eyebrow">Requirements</span>
           <h2 class="h2" style="margin-bottom:20px;">What you need to get started.</h2>
           <p class="body-lg" style="margin-bottom:36px;">Builds are unreleased Windows games that you install and run on your own machine while recording, so you need a gaming PC that can do both at once. Macs, consoles, and handhelds such as the Steam Deck can't be used.</p>
-          <a href="#tester-form" class="btn btn-primary" onclick="document.getElementById('tester-form').scrollIntoView({behavior:'smooth'});return false;">Apply Now</a>
+          <a href="#tester-form" hidden class="btn btn-primary apps-open-only" onclick="document.getElementById('tester-form').scrollIntoView({behavior:'smooth'});return false;">Apply Now</a>
+          <a href="https://x.com/Playtest_Pilot" target="_blank" rel="noopener" class="btn btn-secondary apps-closed-only">Applications closed · Follow for news</a>
         </div>
         <div data-reveal data-delay="100" style="display:flex;flex-direction:column;gap:16px;">
           <div class="card hover-lift" style="padding:20px 24px;display:flex;align-items:center;gap:16px;">
@@ -5326,6 +5344,11 @@
       <div style="display:flex;flex-direction:column;gap:0;">
 
         <div class="faq-item">
+          <button class="faq-btn" onclick="toggleFaq(this)">Are applications open?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2F7BFF" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+          <div class="faq-body"><p class="faq-text">Not at the moment. Our tester pool is full, so we've paused new applications. We'll reopen when we need more testers and announce it on X at <a href="https://x.com/Playtest_Pilot" target="_blank" rel="noopener" style="color:var(--blue);">@Playtest_Pilot</a>.</p></div>
+        </div>
+
+        <div class="faq-item">
           <button class="faq-btn" onclick="toggleFaq(this)">How much does each session pay?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2F7BFF" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
           <div class="faq-body"><p class="faq-text">€15 per completed session, paid within 14 days of the session being confirmed valid. It's a flat session fee, not an hourly rate, and it's the same whatever you think of the game.</p></div>
         </div>
@@ -5379,12 +5402,23 @@
     <div class="hero-dot-grid"></div>
     <div class="container" style="position:relative;">
       <div style="max-width:680px;margin:0 auto;">
-        <div data-reveal style="margin-bottom:48px;">
+        <div data-reveal class="apps-open-only" hidden style="margin-bottom:48px;">
           <span class="eyebrow">Apply to join</span>
           <h2 class="h2" style="margin-bottom:16px;">Apply to become a tester.</h2>
           <p class="body-lg">We review every application by hand. If you're a good fit for Playtest Pilot, we'll be in touch.</p>
         </div>
-        <div id="tester-form-wrap">
+        <!-- Closed state. To reopen applications set TESTER_APPLICATIONS_OPEN = true in the script below. -->
+        <div class="apps-closed-only apps-closed-panel" data-reveal>
+          <div class="apps-closed-icon" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+          <span class="eyebrow">Applications closed</span>
+          <h2 class="h2" style="margin-bottom:14px;">We're not taking new testers right now.</h2>
+          <p class="body-md" style="max-width:520px;margin:0 auto 24px;">Our tester pool is full for the projects we have coming up, so the application form is closed. We'll reopen applications when we need more testers, and we'll announce it on X first.</p>
+          <a href="https://x.com/Playtest_Pilot" target="_blank" rel="noopener" class="btn btn-primary">Follow @Playtest_Pilot on X</a>
+          <p style="font-size:13px;color:var(--muted);margin-top:16px;">Already a verified tester? Nothing changes for you. Keep an eye on the Discord for upcoming projects.</p>
+        </div>
+
+        <div id="tester-form-wrap"></div>
+        <template id="tester-form-template">
           <form id="tester-application-form" onsubmit="submitTesterForm(event)" style="display:flex;flex-direction:column;gap:24px;">
             <input type="hidden" name="access_key" value="d1a8b45f-c22a-4172-9611-0f423a47f9ae">
             <input type="hidden" name="subject" value="New Tester Application - Playtest Pilot">
@@ -5530,7 +5564,7 @@
             </div>
 
           </form>
-        </div>
+        </template>
         <!-- Success state (hidden by default) -->
         <div id="tester-success" style="display:none;text-align:center;padding:60px 32px;background:var(--blue-lt);border-radius:20px;border:1px solid #C3D9FF;">
           <div style="width:64px;height:64px;border-radius:50%;background:#F0FDF4;border:2px solid #BBF7D0;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">
@@ -7003,9 +7037,22 @@
     }
   }
 
+  // ── Tester applications: open/closed switch ──
+  // Set to true to reopen applications: shows the form and the "Apply" buttons, hides the closed notices.
+  const TESTER_APPLICATIONS_OPEN = false;
+  (function applyTesterApplicationState() {
+    document.querySelectorAll('.apps-open-only').forEach(el => { el.hidden = !TESTER_APPLICATIONS_OPEN; });
+    document.querySelectorAll('.apps-closed-only').forEach(el => { el.hidden = TESTER_APPLICATIONS_OPEN; });
+    if (TESTER_APPLICATIONS_OPEN) {
+      const tpl = document.getElementById('tester-form-template');
+      document.getElementById('tester-form-wrap').appendChild(tpl.content.cloneNode(true));
+    }
+  })();
+
   // ── Tester application form ──
   async function submitTesterForm(e) {
     e.preventDefault();
+    if (!TESTER_APPLICATIONS_OPEN) return;
     const form = e.target;
     const btn = form.querySelector('button[type="submit"]');
     btn.textContent = 'Sending...';
