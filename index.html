@@ -5668,7 +5668,7 @@
     <div class="hero-dot-grid"></div>
     <div class="container" style="position:relative;">
       <div style="max-width:700px;margin:0 auto;">
-        <div data-reveal style="text-align:center;margin-bottom:48px;">
+        <div id="book-form-intro" data-reveal style="text-align:center;margin-bottom:48px;">
           <span class="eyebrow">Get started</span>
           <h2 class="h2" style="margin-bottom:16px;">Tell us about your game.</h2>
           <p class="body-lg">Every field helps us match the right players and structure the right playtest for your build.</p>
@@ -7117,6 +7117,7 @@
       const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: new FormData(form) });
       const data = await res.json();
       if (data.success) {
+        document.getElementById('book-form-intro').hidden = true;
         document.getElementById('book-form-wrap').style.display = 'none';
         document.getElementById('book-success').style.display = 'block';
         window.scrollTo({ top: document.getElementById('book-form-section').offsetTop - 80, behavior: 'smooth' });
