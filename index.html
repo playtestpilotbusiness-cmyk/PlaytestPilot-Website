@@ -1349,6 +1349,10 @@
     .apps-closed-icon { width: 56px; height: 56px; border-radius: 16px; background: #fff; border: 1px solid #C3D9FF; display: flex; align-items: center; justify-content: center; margin: 0 auto 18px; }
     @media(max-width:640px) { .apps-closed-panel { padding: 32px 20px; } }
 
+    /* Booking sent: confirmation fills the space between nav and footer */
+    #book-form-section.book-sent { min-height: calc(100vh - 64px); display: flex; align-items: center; }
+    #book-form-section.book-sent > .container { width: 100%; }
+
     /* ── Legal pages ── */
     .legal-layout { display:grid; grid-template-columns:200px 1fr; gap:64px; max-width:920px; margin:0 auto; align-items:start; }
     .legal-toc { position:sticky; top:88px; display:flex; flex-direction:column; gap:1px; }
@@ -5613,7 +5617,7 @@
 <div id="page-book" class="page">
 
   <!-- Hero -->
-  <section class="hero-section" style="padding:72px 0 64px;">
+  <section class="book-pre hero-section" style="padding:72px 0 64px;">
     <div class="hero-dot-grid"></div>
     <div class="container" style="position:relative;">
       <div style="max-width:680px;margin:0 auto;text-align:center;">
@@ -5630,7 +5634,7 @@
   </section>
 
   <!-- What happens next -->
-  <section class="section-py" style="background:var(--blue-lt);border-bottom:1px solid var(--blue-gr);">
+  <section class="book-pre section-py" style="background:var(--blue-lt);border-bottom:1px solid var(--blue-gr);">
     <div class="container">
       <div data-reveal style="text-align:center;max-width:560px;margin:0 auto 52px;">
         <span class="eyebrow">What happens next</span>
@@ -5783,7 +5787,7 @@
           <div style="width:64px;height:64px;border-radius:18px;background:rgba(34,197,94,.12);border:1px solid rgba(34,197,94,.25);display:flex;align-items:center;justify-content:center;margin:0 auto 24px;">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
           </div>
-          <h2 class="h2" style="margin-bottom:16px;">Request received.</h2>
+          <h2 class="h2" tabindex="-1" style="margin-bottom:16px;outline:none;">Request received.</h2>
           <p class="body-lg" style="max-width:480px;margin:0 auto 32px;">We'll review your submission and get back to you within 48 hours to confirm fit, timeline, and next steps.</p>
           <button class="btn btn-secondary" onclick="showPage('home')">Back to Home</button>
         </div>
@@ -7001,6 +7005,7 @@
       l.classList.toggle('active', l.dataset.page === id);
     });
 
+    if (id === 'book' && document.getElementById('book-form-section').classList.contains('book-sent')) showBookConfirmation(false);
     window.scrollTo({ top: 0, behavior: 'instant' });
     setTimeout(initReveal, 50);
 
@@ -7107,6 +7112,27 @@
     }
   }
 
+  // Booking page: confirmation-only view after a request is sent
+  function showBookConfirmation(sent) {
+    document.querySelectorAll('#page-book .book-pre').forEach(s => { s.hidden = sent; });
+    document.getElementById('book-form-intro').hidden = sent;
+    document.getElementById('book-form-wrap').style.display = sent ? 'none' : '';
+    document.getElementById('book-success').style.display = sent ? 'block' : 'none';
+    document.getElementById('book-form-section').classList.toggle('book-sent', sent);
+    if (sent) {
+      window.scrollTo({ top: 0, behavior: 'instant' });
+      document.getElementById('book-success').querySelector('h2').focus({ preventScroll: true });
+    } else {
+      const form = document.getElementById('book-playtest-form');
+      form.reset();
+      const btn = form.querySelector('button[type="submit"]');
+      btn.textContent = 'Submit Booking Request';
+      btn.disabled = false;
+      document.getElementById('build-stage-other').style.display = 'none';
+      updateBookPackage();
+    }
+  }
+
   async function submitBookForm(e) {
     e.preventDefault();
     const form = e.target;
@@ -7117,10 +7143,7 @@
       const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: new FormData(form) });
       const data = await res.json();
       if (data.success) {
-        document.getElementById('book-form-intro').hidden = true;
-        document.getElementById('book-form-wrap').style.display = 'none';
-        document.getElementById('book-success').style.display = 'block';
-        window.scrollTo({ top: document.getElementById('book-form-section').offsetTop - 80, behavior: 'smooth' });
+        showBookConfirmation(true);
       } else {
         btn.textContent = 'Submit Booking Request';
         btn.disabled = false;
