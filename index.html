@@ -1545,6 +1545,7 @@
     .sub-nav { position: sticky; top: 64px; z-index: 90; background: rgba(255,255,255,.94); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); border-bottom: 1px solid var(--blue-gr); }
     .sub-nav-inner { display: flex; align-items: center; gap: 4px; overflow-x: auto; scrollbar-width: none; padding-top: 8px; padding-bottom: 8px; }
     .sub-nav-inner::-webkit-scrollbar { display: none; }
+    @media(min-width:769px) { .sub-nav-inner { justify-content: center; } }
     .sub-nav a { flex-shrink: 0; padding: 8px 14px; border-radius: 999px; font-size: 14px; font-weight: 500; color: var(--muted); text-decoration: none; white-space: nowrap; transition: background .15s, color .15s; }
     .sub-nav a:hover { color: var(--navy); background: var(--blue-lt); }
     .sub-nav a.active { color: var(--blue); background: var(--blue-lt); font-weight: 600; }
@@ -2541,7 +2542,7 @@
     <div class="container" style="position:relative;">
       <div style="max-width:720px;margin:0 auto;text-align:center;">
         <span class="eyebrow">Player Insight Playtest</span>
-        <h1 class="h1" style="margin-bottom:20px;">A complete playtest<br>for one fixed price.</h1>
+        <h1 class="h1" style="margin-bottom:20px;text-wrap:balance;">You send the build.<br>We send you the&nbsp;answers.</h1>
         <p class="body-lg" style="max-width:580px;margin:0 auto 32px;">
           Ten players from your genre each play your game for an hour. We write up where they got stuck, what they missed and what they loved, backed by clips, player counts and survey answers. You can book at any stage of development, from a first vertical slice to a release candidate.
         </p>
@@ -2586,7 +2587,7 @@
   <section style="background:#fff;padding:40px 0;border-top:1px solid var(--blue-gr);border-bottom:1px solid var(--blue-gr);">
     <div class="container">
       <div data-reveal style="max-width:700px;margin:0 auto;text-align:center;">
-        <p style="font-size:15px;color:var(--muted);line-height:1.75;font-family:'Inter',sans-serif;margin-bottom:20px;">Playtest Pilot was founded by Hugo Mendes, whose games industry experience includes Rockstar Games and Ubisoft. Hugo reviews every finding and makes every final call before a report reaches you.</p>
+        <p style="font-size:15px;color:var(--muted);line-height:1.75;font-family:'Inter',sans-serif;margin-bottom:20px;">Playtest Pilot was founded by Hugo Mendes, whose games industry experience includes Rockstar Games and Ubisoft. That experience shapes how every playtest is planned and every report is written.</p>
         <div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center;">
           <span style="font-size:12px;font-weight:600;color:var(--navy);padding:5px 14px;border:1.5px solid var(--blue-gr);border-radius:8px;font-family:'Inter',sans-serif;background:var(--blue-lt);">Rockstar Games</span>
           <span style="font-size:12px;font-weight:600;color:var(--navy);padding:5px 14px;border:1.5px solid var(--blue-gr);border-radius:8px;font-family:'Inter',sans-serif;background:var(--blue-lt);">Ubisoft</span>
@@ -2633,19 +2634,19 @@
             </div>
             <div style="display:flex;gap:10px;align-items:flex-start;">
               <div style="width:6px;height:6px;border-radius:50%;background:var(--green);flex-shrink:0;margin-top:6px;"></div>
-              <p class="body-sm">Want to know if your onboarding works, how players react to a new feature, or where they lose interest</p>
+              <p class="body-sm">Want to see how new players really experience your game</p>
             </div>
             <div style="display:flex;gap:10px;align-items:flex-start;">
               <div style="width:6px;height:6px;border-radius:50%;background:var(--green);flex-shrink:0;margin-top:6px;"></div>
-              <p class="body-sm">Are preparing for a demo, Steam Next Fest, a pitch or a launch, or are between milestones</p>
+              <p class="body-sm">Are working towards a demo, a pitch or a launch, or just want a fresh read on your game</p>
             </div>
             <div style="display:flex;gap:10px;align-items:flex-start;">
               <div style="width:6px;height:6px;border-radius:50%;background:var(--green);flex-shrink:0;margin-top:6px;"></div>
-              <p class="body-sm">Want findings you can back up with clips and numbers</p>
+              <p class="body-sm">Want design decisions with evidence behind them</p>
             </div>
             <div style="display:flex;gap:10px;align-items:flex-start;">
               <div style="width:6px;height:6px;border-radius:50%;background:var(--green);flex-shrink:0;margin-top:6px;"></div>
-              <p class="body-sm">Don’t have time to watch hours of footage and work out what it means</p>
+              <p class="body-sm">Would rather spend your time on the game than on hours of footage</p>
             </div>
           </div>
         </div>
@@ -2705,7 +2706,7 @@
           <p class="body-sm">They know you and want to be kind, and most of them don’t play your genre.</p>
         </div>
       </div>
-      <p class="body-md" style="text-align:center;max-width:620px;margin:32px auto 0;color:var(--navy);font-weight:500;">With a playtest, ten players from your genre play your game for the first time and record every minute. You get a report on where they struggled, why it happened and what to fix first.</p>
+      <p class="body-md" style="text-align:center;max-width:620px;margin:32px auto 0;color:var(--navy);font-weight:500;">With Playtest Pilot, ten players from your genre play your game for the first time and record every minute. You get a report on where they struggled, why it happened and what to fix first.</p>
     </div>
   </section>
 
@@ -3150,7 +3151,7 @@
           </div>
           <div class="proc-body">
             <div style="padding:0 24px 24px 80px;">
-              <p class="body-sm" style="margin-bottom:16px;">We review your request, check we’re a good fit and plan with you what the playtest should answer. Nothing is booked until you approve the plan.</p>
+              <p class="body-sm" style="margin-bottom:16px;">We review your request and check we can find the right players for your game. Then we confirm with you the questions the playtest will answer. Nothing is booked until you approve the plan.</p>
               <div style="display:flex;gap:8px;flex-wrap:wrap;">
                 <span style="display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:700;font-family:'Inter',sans-serif;color:#7C3AED;background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.2);border-radius:20px;padding:4px 10px;">
                   <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>You and us
@@ -3535,7 +3536,7 @@
         </div>
           <div class="faq-item">
           <button class="faq-btn" onclick="toggleFaq(this)">Can I book with or without a milestone?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2F7BFF" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
-          <div class="faq-body"><p class="faq-text">Either works. Many teams book ahead of a demo, Steam Next Fest, a pitch or a launch, and we plan the playtest around that date. You can also book at any stage of development with a playable build: checking a combat change mid-development, finding out where players stop, or testing a new opening.</p></div>
+          <div class="faq-body"><p class="faq-text">Yes, either way. If you’re working towards a date, like a demo, Steam Next Fest, a pitch or a launch, we plan the playtest around it. If not, you can book whenever you have a playable build, for example to check a combat change, find where players stop or test a new opening.</p></div>
         </div>
           <div class="faq-item">
           <button class="faq-btn" onclick="toggleFaq(this)">What is the free trial?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2F7BFF" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
@@ -3585,7 +3586,7 @@
         </div>
           <div class="faq-item">
           <button class="faq-btn" onclick="toggleFaq(this)">Is AI writing the report?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2F7BFF" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
-          <div class="faq-body"><p class="faq-text">No. AI helps us sort the evidence. It transcribes sessions and logs what happens on screen. We use Google’s Gemini on Vertex AI, in the EU by default, and the Anthropic API, both on terms that bar training on your material. Hugo reviews every finding and makes every final call.</p></div>
+          <div class="faq-body"><p class="faq-text">No. AI helps us sort the evidence. It transcribes sessions and logs what happens on screen. We use Google’s Gemini on Vertex AI, in the EU by default, and the Anthropic API, both on terms that bar training on your material. We review every finding and make every final call ourselves.</p></div>
         </div>
           <div class="faq-item">
           <button class="faq-btn" onclick="toggleFaq(this)">Do you work with larger studios?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2F7BFF" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
